@@ -7,6 +7,7 @@ package it.unisa.diem.IS.gruppo18;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  *
@@ -16,6 +17,8 @@ public class Rubrica {
     private Map<String,Contatto> contatti;
     
     public Rubrica(){
-        contatti = new HashMap<>();
+        contatti = new TreeMap<>();
     }
+    
+    
 }
