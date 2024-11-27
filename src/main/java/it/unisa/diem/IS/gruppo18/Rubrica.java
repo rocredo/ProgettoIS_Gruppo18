@@ -5,17 +5,17 @@
  */
 package it.unisa.diem.IS.gruppo18;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
- * @author gruppo18
+ * @author mario
  */
-public class MainTest {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        System.out.println("Ciao, Mondo!");
-    }
+public class Rubrica {
+    private Map<String,Contatto> contatti;
     
+    public Rubrica(){
+        contatti = new HashMap<>();
+    }
 }
