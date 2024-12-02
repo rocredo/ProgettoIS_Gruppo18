@@ -16,7 +16,7 @@ import javafx.scene.control.Label;
 /**
  * FXML Controller class
  *
- * @author mario
+ * @author Gruppo18
  */
 public class SchermataContattoController implements Initializable {
 

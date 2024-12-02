@@ -18,7 +18,8 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author mario
+ * @author Gruppo18
+ * @brief Questa classe si occupa di istanziare l'interfaccia grafica della rubrica.
  */
 public class ApplicazioneRubrica extends Application {
     

@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author mario
+ * @author Gruppo18
  */
 public class Contatto{
     
