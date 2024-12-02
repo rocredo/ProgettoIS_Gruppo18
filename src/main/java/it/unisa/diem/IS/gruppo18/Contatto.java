@@ -5,25 +5,25 @@
  */
 package it.unisa.diem.IS.gruppo18;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author mario
  */
-public class Contatto implements Comparable<Contatto>{
+public class Contatto{
     
     private String nome;
     private String cognome;
-    private String numeroTelefonico;
-    private String email;
+    private List<String> numeriTelefonici;
+    private List<String> email;
     private String domicilio;
     private boolean isFavorite;
     
-    public Contatto(String nome, String cognome, String numeroTelefonico, String email, String domicilio){
-        this.nome = nome;
-        this.cognome = cognome;
-        this.numeroTelefonico = numeroTelefonico;
-        this.email = email;
-        this.domicilio = domicilio;
+    public Contatto(){
+        this.numeriTelefonici = new LinkedList<>();
+        this.email = new LinkedList<>();
         this.isFavorite = false;
     }
     
@@ -39,11 +39,11 @@ public class Contatto implements Comparable<Contatto>{
         return this.cognome;
     }
     
-    public String getNumeroTelefonico(){
-        return this.numeroTelefonico;
+    public List getNumeriTelefonici(){
+        return this.numeriTelefonici;
     }
     
-    public String getEmail(){
+    public List getEmail(){
         return this.email;
     }
     
@@ -67,25 +67,12 @@ public class Contatto implements Comparable<Contatto>{
         this.cognome = cognome;
     }
     
-    public void setNumeroTelefonico(String numero){
-        this.numeroTelefonico = numero;
-    }
-    
-    public void setEmail(String email){
-        this.email = email;
-    }
-    
     public void setDomicilio(String domicilio){
         this.domicilio = domicilio;
     }
     
     public void setIsfavorite(boolean value){
-        this.isFavorite = value;
-    }
-    
-    @Override
-    public int compareTo(Contatto o) {
-        return this.nome.compareTo(o.getNome());
+        this.isFavorite = !isFavorite;
     }
 
     

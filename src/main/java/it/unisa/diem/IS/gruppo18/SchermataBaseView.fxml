@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.IS.gruppo18.SchermataBaseController">
+   <children>
+      <SplitPane dividerPositions="0.2" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: linear-gradient(to bottom right, #282828, #484848);">
+               <children>
+                  <TextField fx:id="searchBox" layoutX="80.0" layoutY="58.0" promptText="Ricerca..." stylesheets="@textField.css" />
+                  <HBox layoutX="560.0" layoutY="59.0" prefHeight="31.0" prefWidth="640.0" spacing="80.0">
+                     <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#aggiungiContatto" prefHeight="31.0" prefWidth="100.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/button.css" text="Aggiungi" />
+                        <Button fx:id="downloadButton" mnemonicParsing="false" onAction="#scaricaContatti" prefHeight="31.0" prefWidth="100.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/button.css" text="Scarica" />
+                        <Button fx:id="uploadButton" mnemonicParsing="false" onAction="#caricaContatti" prefHeight="31.0" prefWidth="100.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/button.css" text="Carica" />
+                        <Button fx:id="showFavoriteButton" mnemonicParsing="false" onAction="#showFavorite" prefHeight="31.0" prefWidth="100.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/button.css" text="Mostra preferiti" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: linear-gradient(to bottom right, #282828, #484848);;">
+               <children>
+                  <TableView prefHeight="570.0" prefWidth="1278.0" style="-fx-background-color: #282828;" stylesheets="@tableView.css">
+                     <columns>
+                        <TableColumn prefWidth="50.0" text="Indice" />
+                        <TableColumn prefWidth="246.0" text="Nome" />
+                        <TableColumn prefWidth="246.0" text="Cognome" />
+                        <TableColumn prefWidth="246.0" text="Numero" />
+                        <TableColumn prefWidth="246.0" text="E-mail" />
+                        <TableColumn prefWidth="246.0" text="Domicilio" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
