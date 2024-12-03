@@ -24,17 +24,19 @@
           <RowConstraints maxHeight="326.0" minHeight="10.0" prefHeight="202.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Nome" textFill="#efefef" />
+                        <TextField fx:id="nameField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire nome..." />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                <children>
                   <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Cognome" textFill="#efefef" />
                   <TextField fx:id="surnameField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire nome..." />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Nome" textFill="#efefef" />
-                  <TextField fx:id="nameField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire nome..." />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">

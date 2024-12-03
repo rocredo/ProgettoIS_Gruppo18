@@ -57,7 +57,7 @@ public class SchermataBaseController {
     /**
      * Initializes the controller class.
      */
-    /*@Override
+   
     public void initialize(URL url, ResourceBundle rb) {
         
         contactList = FXCollections.observableArrayList();
@@ -69,15 +69,15 @@ public class SchermataBaseController {
         emailColumn.setCellValueFactory(new PropertyValueFactory("email"));
         addressColumn.setCellValueFactory(new PropertyValueFactory("domicilio"));
         
-        contactTable.setOnMouseClicked(event -> {
+        /*contactTable.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2) { // Doppio clic
             Contatto selectedContact = contactTable.getSelectionModel().getSelectedItem();
             if (selectedContact != null) {
                 openContactDetailWindow(selectedContact);
             }
         }
-    });
-    }*/
+        });*/
+    }
 
     /*DA MODIFICARE
     private void openContactDetailWindow(Contatto contact) {
@@ -101,16 +101,32 @@ public class SchermataBaseController {
 
 
     @FXML
-    private void aggiungiContatto(ActionEvent event) {
-        /**/
+    private void addContact(ActionEvent event) throws IOException {
+
+        // Crea un FXMLLoader per caricare l'FXML e ottenere il controller
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CreazioneContattoView.fxml"));
+        Parent root = loader.load(); // Carica l'FXML
+
+        // Ottieni il controller associato
+        CreazioneContattoController controller = loader.getController();
+        controller.setList(contactList); //Se non va settata quindi, quando va ?
+
+        // Crea e mostra la nuova finestra
+        Scene scene = new Scene(root);
+        Stage CreazioneContatto = new Stage();
+        CreazioneContatto.setTitle("Creazione Contatto");
+        CreazioneContatto.setScene(scene);
+        CreazioneContatto.show();
+        
+        
     }
 
     @FXML
-    private void scaricaContatti(ActionEvent event) {
+    private void downloadContacts(ActionEvent event) {
     }
 
     @FXML
-    private void caricaContatti(ActionEvent event) {
+    private void uploadContacts(ActionEvent event) {
     }
 
     @FXML
