@@ -14,7 +14,7 @@ import javafx.collections.ObservableList;
  */
 public class Rubrica {
 
-    private static ObservableList<Contatto> contactList = FXCollections.observableArrayList();
+    public static ObservableList<Contatto> contactList = FXCollections.observableArrayList();
 
     public static ObservableList<Contatto> getContactList() {
         return contactList;
@@ -22,5 +22,6 @@ public class Rubrica {
 
     public static void add(Contatto contatto){
         contactList.add(contatto);
-    } 
+    }
+    
 }

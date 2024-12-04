@@ -7,6 +7,7 @@ package it.unisa.diem.IS.gruppo18;
 
 import java.util.LinkedList;
 import java.util.List;
+import javafx.beans.property.*;
 
 /**
  *
@@ -14,29 +15,31 @@ import java.util.List;
  */
 public class Contatto{
     
-    private String nome;
-    private String cognome;
-    private List<String> numeriTelefonici;
-    private List<String> email;
-    private String domicilio;
-    private boolean isFavorite;
+    private StringProperty nome;
+    private StringProperty cognome;
+    private List<StringProperty> numeriTelefonici;
+    private List<StringProperty> email;
+    private StringProperty domicilio;
+    private BooleanProperty isFavorite;
     
-    public Contatto(String nome){
-        this.nome = nome;
+    public Contatto(){
+        this.nome = new SimpleStringProperty();
+        /*this.cognome = new SimpleStringProperty();
         this.numeriTelefonici = new LinkedList<>();
         this.email = new LinkedList<>();
-        this.isFavorite = false;
+        this.domicilio = new SimpleStringProperty();
+        this.isFavorite = new SimpleBooleanProperty(false);*/
     }
     
     // =====================================
     // Metodi Getter
     // =====================================
     
-    public String getNome(){
+    public StringProperty getNome(){
         return this.nome;
     }
     
-    public String getCognome(){
+    public StringProperty getCognome(){
         return this.cognome;
     }
     
@@ -48,11 +51,11 @@ public class Contatto{
         return this.email;
     }
     
-    public String getDomicilio(){
+    public StringProperty getDomicilio(){
         return this.domicilio;
     }
     
-    public boolean getIsFavorite(){
+    public BooleanProperty getIsFavorite(){
         return this.isFavorite;
     }
 
@@ -61,19 +64,19 @@ public class Contatto{
     // =====================================
     
     public void setNome(String nome){
-        this.nome = nome;
+        this.nome.set(nome);
     }
     
-    public void setCognome(String cognome){
+    public void setCognome(StringProperty cognome){
         this.cognome = cognome;
     }
     
-    public void setDomicilio(String domicilio){
+    public void setDomicilio(StringProperty domicilio){
         this.domicilio = domicilio;
     }
     
-    public void setIsfavorite(boolean value){
-        this.isFavorite = !isFavorite;
+    public void setIsfavorite(){
+        this.isFavorite.set(!isFavorite.get());
     }
 
     

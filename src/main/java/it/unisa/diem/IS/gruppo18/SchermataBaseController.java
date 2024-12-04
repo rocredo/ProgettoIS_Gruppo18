@@ -55,8 +55,6 @@ public class SchermataBaseController {
     private TableColumn<Contatto, String> emailColumn;
     @FXML
     private TableColumn<Contatto, String> addressColumn;
-    
-    private Rubrica rubrica;
 
     //private ObservableList<Contatto> contactList;
     /**
@@ -65,13 +63,13 @@ public class SchermataBaseController {
    
     public void initialize(URL url, ResourceBundle rb) {
         
-        contactTable.setItems(rubrica.getContactList());
-        
         nameColumn.setCellValueFactory(new PropertyValueFactory("nome")); /////////
         surnameColumn.setCellValueFactory(new PropertyValueFactory("cognome"));
-        numberColumn.setCellValueFactory(new PropertyValueFactory("numeroTelefonico"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory("email"));
+        //numberColumn.setCellValueFactory(new PropertyValueFactory("numeroTelefonico"));
+        //emailColumn.setCellValueFactory(new PropertyValueFactory("email"));
         addressColumn.setCellValueFactory(new PropertyValueFactory("domicilio"));
+        
+        contactTable.setItems(Rubrica.contactList);
         
         /*contactTable.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2) { // Doppio clic
@@ -106,8 +104,6 @@ public class SchermataBaseController {
 
     @FXML
     private void addContact(ActionEvent event) throws IOException {
-        
-        //contactTable.getItems().add(new Contatto("pippo"));
 
         // Crea un FXMLLoader per caricare l'FXML e ottenere il controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CreazioneContattoView.fxml"));
@@ -123,11 +119,6 @@ public class SchermataBaseController {
         CreazioneContatto.setScene(scene);
         CreazioneContatto.show();
         
-    }
-    
-    @FXML
-    private void refresh(){
-        contactTable.refresh();
     }
 
     @FXML
