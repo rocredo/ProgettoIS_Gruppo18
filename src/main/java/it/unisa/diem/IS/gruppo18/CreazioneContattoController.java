@@ -7,6 +7,7 @@ package it.unisa.diem.IS.gruppo18;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -48,30 +49,29 @@ public class CreazioneContattoController implements Initializable {
     @FXML
     private Button cancelNewButton;
 
-    private ObservableList<Contatto> contactList;
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        contactList = FXCollections.observableArrayList();
+    public void initialize(URL url, ResourceBundle rb){
     }    
 
     @FXML
     private void saveNewContact(ActionEvent event) throws IOException {
         
-        Contatto tmp = new Contatto();
-        System.out.println(nameField.getText());
-        tmp.setNome(nameField.getText());
-        
-        contactList.add(tmp);
-        
-        
+        Contatto tmp = new Contatto(nameField.textProperty().get());
+        //tmp.setNome(nameField.textProperty().get());
+        /*tmp.setCognome(surnameField.getText());
+        tmp.setDomicilio(addressField.getText());
+        tmp.getNumeriTelefonici().add(numberField1.getText());
+        tmp.getEmail().add(emailField1.getText());*/
+        Rubrica.add(tmp);
+    
     }
     
-    public void setList(ObservableList<Contatto> list){
+    /*public void setList(ObservableList<Contatto> list){
         this.contactList = list;
-    }
+    }*/
 
     @FXML
     private void cancelNewContact(ActionEvent event) {

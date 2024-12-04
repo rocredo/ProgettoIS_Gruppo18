@@ -25,6 +25,7 @@ public class ApplicazioneRubrica extends Application {
     
     @Override
     public void start(Stage stage) throws IOException {
+        
         Parent root = FXMLLoader.load(getClass().getResource("SchermataBaseView.fxml"));
         
         Scene scene = new Scene(root);

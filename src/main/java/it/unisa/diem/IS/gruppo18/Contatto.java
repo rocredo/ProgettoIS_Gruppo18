@@ -21,7 +21,8 @@ public class Contatto{
     private String domicilio;
     private boolean isFavorite;
     
-    public Contatto(){
+    public Contatto(String nome){
+        this.nome = nome;
         this.numeriTelefonici = new LinkedList<>();
         this.email = new LinkedList<>();
         this.isFavorite = false;

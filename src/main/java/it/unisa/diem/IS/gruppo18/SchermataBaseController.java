@@ -5,6 +5,7 @@
  */
 package it.unisa.diem.IS.gruppo18;
 
+import com.sun.corba.se.pept.transport.ContactInfoList;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -41,6 +42,8 @@ public class SchermataBaseController {
     @FXML
     private Button showFavoriteButton;
     @FXML
+    private Button refresh;
+    @FXML
     private TableView<Contatto> contactTable;
     @FXML
     private TableColumn<Contatto, String> nameColumn;
@@ -52,16 +55,17 @@ public class SchermataBaseController {
     private TableColumn<Contatto, String> emailColumn;
     @FXML
     private TableColumn<Contatto, String> addressColumn;
+    
+    private Rubrica rubrica;
 
-    private ObservableList<Contatto> contactList;
+    //private ObservableList<Contatto> contactList;
     /**
      * Initializes the controller class.
      */
    
     public void initialize(URL url, ResourceBundle rb) {
         
-        contactList = FXCollections.observableArrayList();
-        contactTable.setItems(contactList);
+        contactTable.setItems(rubrica.getContactList());
         
         nameColumn.setCellValueFactory(new PropertyValueFactory("nome")); /////////
         surnameColumn.setCellValueFactory(new PropertyValueFactory("cognome"));
@@ -102,14 +106,15 @@ public class SchermataBaseController {
 
     @FXML
     private void addContact(ActionEvent event) throws IOException {
+        
+        //contactTable.getItems().add(new Contatto("pippo"));
 
         // Crea un FXMLLoader per caricare l'FXML e ottenere il controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CreazioneContattoView.fxml"));
         Parent root = loader.load(); // Carica l'FXML
-
         // Ottieni il controller associato
-        CreazioneContattoController controller = loader.getController();
-        controller.setList(contactList); //Se non va settata quindi, quando va ?
+        /*CreazioneContattoController controller = loader.getController();
+        controller.setList(contactList); //Se non va settata quindi, quando va ?*/
 
         // Crea e mostra la nuova finestra
         Scene scene = new Scene(root);
@@ -118,7 +123,11 @@ public class SchermataBaseController {
         CreazioneContatto.setScene(scene);
         CreazioneContatto.show();
         
-        
+    }
+    
+    @FXML
+    private void refresh(){
+        contactTable.refresh();
     }
 
     @FXML
