@@ -74,7 +74,7 @@ public class CreazioneContattoController implements Initializable {
      */
     @FXML
     private void saveNewContact(ActionEvent event) throws IOException {
-<<<<<<< HEAD
+
     
         Contatto contatto = new Contatto();
         /*tmp.getNome().set(nameField.getText());
@@ -82,11 +82,7 @@ public class CreazioneContattoController implements Initializable {
         tmp.setDomicilio(addressField.textProperty());
         tmp.getNumeriTelefonici().add(numberField1.textProperty());
         tmp.getEmail().add(emailField1.textProperty());*/
-=======
-        
-        Contatto contatto = new Contatto();
         contatto.setNome(nameField.getText());
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
         Rubrica.add(contatto);
     
     }

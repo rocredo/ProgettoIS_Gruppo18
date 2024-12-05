@@ -20,7 +20,6 @@ import javafx.beans.property.*;
  */
 public class Contatto{
     
-<<<<<<< HEAD
     /**
      * @var nome
      * @brief Nome del contatto.
@@ -50,13 +49,6 @@ public class Contatto{
      * @var isFavorite
      * @brief Variabile che indica se il contatto appartiene ai preferiti.
      */
-=======
-    private String nome;
-    private String cognome;
-    private List<Property> numeriTelefonici;
-    private List<Property> email;
-    private String domicilio;
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
     private boolean isFavorite;
     
     /**
@@ -75,24 +67,18 @@ public class Contatto{
     // Metodi Getter
     // =====================================
     
-<<<<<<< HEAD
     /**
      * @brief Ottiene il nome del contatto.
      * @return String nome.
      */
-=======
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
     public String getNome(){
         return this.nome;
     }
     
-<<<<<<< HEAD
     /**
      * @brief Ottiene il cognome del contatto.
      * @return String cognome.
      */
-=======
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
     public String getCognome(){
         return this.cognome;
     }
@@ -113,26 +99,20 @@ public class Contatto{
         return this.email;
     }
     
-<<<<<<< HEAD
+
     /**
      * @brief Ottiene l'indirizzo di domicilio del contatto.
      * @return String domicilio.
      */
-=======
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
     public String getDomicilio(){
         return this.domicilio;
     }
     
-<<<<<<< HEAD
     /**
      * @brief Verifica se il contatto appartiene ai referiti.
      * @return Boolean isFavorite.
      */
-    public Boolean getIsFavorite(){
-=======
     public boolean getIsFavorite(){
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
         return this.isFavorite;
     }
 
@@ -148,24 +128,20 @@ public class Contatto{
         this.nome = nome;
     }
     
-<<<<<<< HEAD
+
     /**
      * @brief Imposta il cognome del contatto.
      * @param cognome Cognome del contatto.
      */
-=======
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
     public void setCognome(String cognome){
         this.cognome = cognome;
     }
     
-<<<<<<< HEAD
+
     /**
      * @brief Imposta l'indirizzo di domicilio del contatto.
      * @param domicilio Indirizzo di domicilio.
      */
-=======
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
     public void setDomicilio(String domicilio){
         this.domicilio = domicilio;
     }
@@ -176,9 +152,7 @@ public class Contatto{
      */
     public void setIsfavorite(){
         this.isFavorite = !isFavorite;
-<<<<<<< HEAD
     }
-    
     /**
      * @brief Aggiunge un numero alla lista dei numeri telefonici.
      * @param numero Nuovo numero di telefono.
@@ -248,8 +222,6 @@ public class Contatto{
         
         sb.append("\n");
         return sb.toString();
-=======
->>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
     }
 
     
