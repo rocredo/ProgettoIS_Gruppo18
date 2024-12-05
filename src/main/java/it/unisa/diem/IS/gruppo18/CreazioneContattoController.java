@@ -18,10 +18,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
- * FXML Controller class
+ * @class CreazioneContattoController
+ * @brief Controller per l'interfaccia di creazione di un nuovo contatto.
  *
+ * Gestisce l'interfaccia utente e la logica per l'aggiunta di un nuovo contatto.
+ * Include il metodo per acquisire i dati dall'interfaccia di creazione contatto
+ * per creare un nuovo contatto da salvare nella lista osservabile di Rubrica.
+ * 
  * @author Gruppo18
  */
 public class CreazioneContattoController implements Initializable {
@@ -50,31 +56,45 @@ public class CreazioneContattoController implements Initializable {
     private Button cancelNewButton;
 
     /**
-     * Initializes the controller class.
+     * @brief Inizializza il controller.
+     * Viene chiamato automaticamente quando la scena viene caricata.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb){
     }    
 
+    /**
+     * @brief Metodo per salvare un nuovo contatto.
+     * 
+     * Acquisisce i dati dai campi dei textfield, crea un nuovo oggetto Contatto, imposta
+     * i rispettivi cambi e lo aggiunge alla rubrica. Viene lanciato cliccando sul pulsante
+     * "Salva".
+     * 
+     * @throws IOException Se ci sono problemi con l'IO.
+     */
     @FXML
     private void saveNewContact(ActionEvent event) throws IOException {
-        
-        Contatto tmp = new Contatto();
-        tmp.getNome().set(nameField.getText());
-        /*tmp.setCognome(surnameField.textProperty());
+    
+        Contatto contatto = new Contatto();
+        /*tmp.getNome().set(nameField.getText());
+        tmp.setCognome(surnameField.textProperty());
         tmp.setDomicilio(addressField.textProperty());
         tmp.getNumeriTelefonici().add(numberField1.textProperty());
         tmp.getEmail().add(emailField1.textProperty());*/
-        Rubrica.add(tmp);
+        Rubrica.add(contatto);
     
     }
-    
-    /*public void setList(ObservableList<Contatto> list){
-        this.contactList = list;
-    }*/
 
+    /**
+     * @brief Metodo per annullare la creazione di un nuovo contatto.
+     *
+     * Chiude la finestra corrente. Viene lanciato cliccando sul pulsante "Annulla".
+     *
+     */
     @FXML
     private void cancelNewContact(ActionEvent event) {
+        Stage stage = (Stage) cancelNewButton.getScene().getWindow();
+        stage.close();
     }
     
 }

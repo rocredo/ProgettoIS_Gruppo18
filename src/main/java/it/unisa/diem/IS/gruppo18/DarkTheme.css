@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5-dic-2024, 19.19.04
+    Author     : Mario
+*/
+
+.button {
+    -fx-background-color: transparent; /* Sfondo puro bianco */
+    -fx-background-radius: 3; /* Smussatura leggera */
+    -fx-border-radius: 3; /* Smussatura del bordo */
+    -fx-border-color: #cfcfcf; /* Colore del bordo sottile */
+    -fx-border-width: 0.5; /* Spessore del bordo */
+    -fx-text-fill: #cfcfcf; /* Colore del testo */
+    -fx-padding: 5; /* Spaziatura interna */
+}
+
+.split-pane {
+    -fx-background-color: linear-gradient(to bottom right, #282828, #484848); /* Sfondo dello SplitPane */
+}
+
+.split-pane-divider {
+    -fx-background-color: linear-gradient(to bottom, #505050, #383838, #505050); /* Colore della barra separatrice */
+    -fx-pref-width: 8; /* Larghezza della barra separatrice */
+}
+
+.table-view .column-header {
+    -fx-background-color: #282828; /* Sfondo del box superiore */
+    -fx-text-fill: #fefefe; /* Colore del testo */
+    -fx-alignment: center; /* Allinea il testo al centro */
+    -fx-border-color: #cfcfcf; /* Bordo sottile per le intestazioni */
+    -fx-border-width: 0 0.2 1 0; /* Bordo solo nella parte inferiore */
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: #fefefe;
+    -fx-font-size: 12px;
+    -fx-font-weight: thin;   
+}
+
+.text-field {
+    -fx-background-color: transparent; /* Sfondo puro bianco */
+    -fx-background-radius: 3; /* Smussatura leggera */
+    -fx-border-radius: 3; /* Smussatura del bordo */
+    -fx-border-color: #cfcfcf; /* Colore del bordo sottile */
+    -fx-border-width: 0.5; /* Spessore del bordo */
+    -fx-text-fill: #cfcfcf; /* Colore del testo */
+    -fx-padding: 5; /* Spaziatura interna */
+}
+
+

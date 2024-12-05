@@ -29,6 +29,7 @@ public class ApplicazioneRubrica extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("SchermataBaseView.fxml"));
         
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("DarkTheme.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }

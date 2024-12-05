@@ -14,13 +14,13 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/splitPaneUp.css">
                <children>
-                  <TextField fx:id="searchBox" layoutX="80.0" layoutY="58.0" promptText="Ricerca..." stylesheets="@textField.css" />
+                  <TextField fx:id="searchBox" layoutX="80.0" layoutY="58.0" promptText="Ricerca..." stylesheets="@DarkTheme.css" />
                   <HBox layoutX="560.0" layoutY="59.0" prefHeight="31.0" prefWidth="640.0" spacing="80.0">
                      <children>
-                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addContact" prefHeight="31.0" prefWidth="100.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/button.css" text="Aggiungi" />
-                        <Button fx:id="downloadButton" mnemonicParsing="false" onAction="#downloadContacts" prefHeight="31.0" prefWidth="100.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/button.css" text="Scarica" />
-                        <Button fx:id="uploadButton" mnemonicParsing="false" onAction="#uploadContacts" prefHeight="31.0" prefWidth="100.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/button.css" text="Carica" />
-                        <Button fx:id="showFavoriteButton" mnemonicParsing="false" onAction="#showFavorite" prefHeight="31.0" prefWidth="100.0" stylesheets="@../../../../../../../../../ProgettoIS_Gruppo18/src/main/java/it/unisa/diem/IS/gruppo18/button.css" text="Mostra preferiti" />
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addContact" prefHeight="31.0" prefWidth="100.0" stylesheets="@DarkTheme.css" text="Aggiungi" />
+                        <Button fx:id="downloadButton" mnemonicParsing="false" onAction="#downloadContacts" prefHeight="31.0" prefWidth="100.0" stylesheets="@DarkTheme.css" text="Scarica" />
+                        <Button fx:id="uploadButton" mnemonicParsing="false" onAction="#uploadContacts" prefHeight="31.0" prefWidth="100.0" stylesheets="@DarkTheme.css" text="Carica" />
+                        <Button fx:id="showFavoriteButton" mnemonicParsing="false" onAction="#showFavorite" prefHeight="31.0" prefWidth="100.0" stylesheets="@DarkTheme.css" text="Mostra preferiti" />
                      </children>
                   </HBox>
                </children>

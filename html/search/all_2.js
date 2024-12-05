@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['initialize_0',['initialize',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_creazione_contatto_controller.html#ae8447c527a160a587e10b637781c423e',1,'it.unisa.diem.IS.gruppo18.CreazioneContattoController.initialize()'],['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_contatto_controller.html#a7f57bd6bae2edaf04820119fa0a8517c',1,'it.unisa.diem.IS.gruppo18.SchermataContattoController.initialize()']]]
+  ['domicilio_0',['domicilio',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#ac3909cb049be880b18f46df523ac5320',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
+  ['downloadcontacts_1',['downloadContacts',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_base_controller.html#a92ea09c9f1084c21b125b5d26cb3dcc1',1,'it::unisa::diem::IS::gruppo18::SchermataBaseController']]]
 ];
