@@ -15,6 +15,7 @@ import javafx.collections.ObservableList;
  * @author Gruppo18
  */
 public class Rubrica {
+<<<<<<< HEAD
     
     /**
      * @var contactList
@@ -23,6 +24,10 @@ public class Rubrica {
      * Contiene gli oggetti della classe Contatto che rappresentano i contatti della rubrica.
      */
     public static ObservableList<Contatto> contactList = FXCollections.observableArrayList();
+=======
+
+    private static ObservableList<Contatto> contactList = FXCollections.observableArrayList();
+>>>>>>> 1e38d6a6a80c4b356f2f603f86dc6b9f7ea7fd5c
 
     /**
      * @brief Restituisce la lista dei contatti.
