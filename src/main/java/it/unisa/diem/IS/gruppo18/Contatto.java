@@ -15,31 +15,28 @@ import javafx.beans.property.*;
  */
 public class Contatto{
     
-    private StringProperty nome;
-    private StringProperty cognome;
-    private List<StringProperty> numeriTelefonici;
-    private List<StringProperty> email;
-    private StringProperty domicilio;
-    private BooleanProperty isFavorite;
+    private String nome;
+    private String cognome;
+    private List<Property> numeriTelefonici;
+    private List<Property> email;
+    private String domicilio;
+    private boolean isFavorite;
     
     public Contatto(){
-        this.nome = new SimpleStringProperty();
-        /*this.cognome = new SimpleStringProperty();
         this.numeriTelefonici = new LinkedList<>();
         this.email = new LinkedList<>();
-        this.domicilio = new SimpleStringProperty();
-        this.isFavorite = new SimpleBooleanProperty(false);*/
+        this.isFavorite = false;
     }
     
     // =====================================
     // Metodi Getter
     // =====================================
     
-    public StringProperty getNome(){
+    public String getNome(){
         return this.nome;
     }
     
-    public StringProperty getCognome(){
+    public String getCognome(){
         return this.cognome;
     }
     
@@ -51,11 +48,11 @@ public class Contatto{
         return this.email;
     }
     
-    public StringProperty getDomicilio(){
+    public String getDomicilio(){
         return this.domicilio;
     }
     
-    public BooleanProperty getIsFavorite(){
+    public boolean getIsFavorite(){
         return this.isFavorite;
     }
 
@@ -64,19 +61,19 @@ public class Contatto{
     // =====================================
     
     public void setNome(String nome){
-        this.nome.set(nome);
+        this.nome = nome;
     }
     
-    public void setCognome(StringProperty cognome){
+    public void setCognome(String cognome){
         this.cognome = cognome;
     }
     
-    public void setDomicilio(StringProperty domicilio){
+    public void setDomicilio(String domicilio){
         this.domicilio = domicilio;
     }
     
     public void setIsfavorite(){
-        this.isFavorite.set(!isFavorite.get());
+        this.isFavorite = !isFavorite;
     }
 
     

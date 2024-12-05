@@ -65,11 +65,11 @@ public class SchermataBaseController {
         
         nameColumn.setCellValueFactory(new PropertyValueFactory("nome")); /////////
         surnameColumn.setCellValueFactory(new PropertyValueFactory("cognome"));
-        //numberColumn.setCellValueFactory(new PropertyValueFactory("numeroTelefonico"));
-        //emailColumn.setCellValueFactory(new PropertyValueFactory("email"));
+        numberColumn.setCellValueFactory(new PropertyValueFactory("numeroTelefonico"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory("email"));
         addressColumn.setCellValueFactory(new PropertyValueFactory("domicilio"));
         
-        contactTable.setItems(Rubrica.contactList);
+        contactTable.setItems(Rubrica.getContactList());
         
         /*contactTable.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2) { // Doppio clic
