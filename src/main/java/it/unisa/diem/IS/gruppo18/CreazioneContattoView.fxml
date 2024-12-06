@@ -26,7 +26,7 @@
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                      <children>
                         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Nome" textFill="#efefef" />
                         <TextField fx:id="nameField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire nome..." stylesheets="@DarkTheme.css" />
@@ -35,7 +35,7 @@
                </children></AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                      <children>
                         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Cognome" textFill="#efefef" />
                         <TextField fx:id="surnameField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire cognome..." stylesheets="@DarkTheme.css" />
@@ -69,7 +69,7 @@
             </AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                      <children>
                         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Domicilio" textFill="#efefef" />
                         <TextField fx:id="addressField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire domicilio..." stylesheets="@DarkTheme.css" />

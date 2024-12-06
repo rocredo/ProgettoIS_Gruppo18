@@ -23,6 +23,9 @@ public class Rubrica {
      * Contiene gli oggetti della classe Contatto che rappresentano i contatti della rubrica.
      */
     private static ObservableList<Contatto> contactList = FXCollections.observableArrayList();
+    
+    public Rubrica(){
+    }
 
     /**
      * @brief Restituisce la lista dei contatti.
@@ -32,7 +35,7 @@ public class Rubrica {
      * 
      * @return ObservableList<Contatto>.
      */
-    public static ObservableList<Contatto> getContactList() {
+    public ObservableList<Contatto> getContactList() {
         return contactList;
     }
 
@@ -44,7 +47,7 @@ public class Rubrica {
      * 
      * @param contatto Oggetto della classe Contatto da aggiungere alla rubrica.
      */
-    public static void add(Contatto contatto){
+    public void add(Contatto contatto){
         contactList.add(contatto);
     }
     

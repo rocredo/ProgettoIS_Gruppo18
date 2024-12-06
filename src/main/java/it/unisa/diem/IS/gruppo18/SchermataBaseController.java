@@ -34,7 +34,7 @@ import javafx.stage.Stage;
  * 
  * @author Gruppo18
  */
-public class SchermataBaseController {
+public class SchermataBaseController implements Initializable{
 
     @FXML
     private TextField searchBox;
@@ -60,6 +60,9 @@ public class SchermataBaseController {
     private TableColumn<Contatto, String> emailColumn;
     @FXML
     private TableColumn<Contatto, String> addressColumn;
+    
+    private boolean showingFavorite;
+    private Rubrica rubrica;
 
     /**
      * @brief Inizializza il controller e configura la tabella dei contatti.
@@ -70,13 +73,16 @@ public class SchermataBaseController {
      */
     public void initialize(URL url, ResourceBundle rb) {
         
+        showingFavorite = false;
+        rubrica = new Rubrica();
+        
         nameColumn.setCellValueFactory(new PropertyValueFactory("nome")); /////////
         surnameColumn.setCellValueFactory(new PropertyValueFactory("cognome"));
         numberColumn.setCellValueFactory(new PropertyValueFactory("numeroTelefonico"));
         emailColumn.setCellValueFactory(new PropertyValueFactory("email"));
         addressColumn.setCellValueFactory(new PropertyValueFactory("domicilio"));
         
-        contactTable.setItems(Rubrica.getContactList());
+        contactTable.setItems(rubrica.getContactList());
         
         /*contactTable.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2) { // Doppio clic
@@ -100,7 +106,15 @@ public class SchermataBaseController {
     @FXML
     private void addContact(ActionEvent event) throws IOException {
         
-
+        /*Contatto contatto1 = new Contatto();
+        contatto1.setNome("pippo");
+        Contatto contatto2 = new Contatto();
+        contatto2.setNome("gino");
+        contatto2.setIsfavorite();
+        contactTable.getItems().add(contatto1);
+        contactTable.getItems().add(contatto2);*/
+        
+        
         // Crea un FXMLLoader per caricare l'FXML e ottenere il controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CreazioneContattoView.fxml"));
         Parent root = loader.load(); // Carica l'FXML
@@ -108,13 +122,13 @@ public class SchermataBaseController {
         /*CreazioneContattoController controller = loader.getController();
         controller.setList(contactList); //Se non va settata quindi, quando va ?*/
 
-        // Crea e mostra la nuova finestra
+        //Crea e mostra la nuova finestra
         Scene scene = new Scene(root);
         Stage CreazioneContatto = new Stage();
         CreazioneContatto.setTitle("Creazione Contatto");
         CreazioneContatto.setScene(scene);
         CreazioneContatto.show();
-        
+       
     }
 
     /**
@@ -149,6 +163,21 @@ public class SchermataBaseController {
      */
     @FXML
     private void showFavorite(ActionEvent event) {
+        
+        if(!showingFavorite){
+            ObservableList<Contatto> tmp = FXCollections.observableArrayList();
+            for(Contatto c : contactTable.getItems()){
+                if(c.getIsFavorite()){
+                    tmp.add(c);
+                }
+            }
+            contactTable.setItems(tmp);
+            showingFavorite=!showingFavorite;
+        }
+        
+        contactTable.setItems(rubrica.getContactList());
+        showingFavorite=!showingFavorite;
+        
     }
     
 }

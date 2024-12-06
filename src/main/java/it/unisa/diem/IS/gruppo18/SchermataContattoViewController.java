@@ -12,38 +12,45 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
- * @author Gruppo18
+ * @author mario
  */
-public class SchermataContattoController implements Initializable {
+public class SchermataContattoViewController implements Initializable {
 
-    @FXML
-    private Label surnameLabel;
-    @FXML
-    private Label nameLabel;
-    @FXML
-    private Label phoneLabel1;
-    @FXML
-    private Label phoneLabel2;
-    @FXML
-    private Label phoneLabel3;
-    @FXML
-    private Label emailLabel1;
-    @FXML
-    private Label emailLabel2;
-    @FXML
-    private Label emailLabel3;
-    @FXML
-    private Label addressLabel;
     @FXML
     private Button modifyButton;
     @FXML
     private Button favoriteButton;
     @FXML
     private Button exitButton;
+    @FXML
+    private Label addressLabel;
+    @FXML
+    private TextField addressField;
+    @FXML
+    private TextField emailField1;
+    @FXML
+    private TextField emailField2;
+    @FXML
+    private TextField emailField3;
+    @FXML
+    private TextField numberField1;
+    @FXML
+    private TextField numberField2;
+    @FXML
+    private TextField numberField3;
+    @FXML
+    private Label nameLabel;
+    @FXML
+    private TextField nameField;
+    @FXML
+    private Label surnameLabel;
+    @FXML
+    private TextField surnameField;
 
     /**
      * Initializes the controller class.

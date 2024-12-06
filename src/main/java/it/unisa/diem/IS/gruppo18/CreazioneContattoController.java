@@ -54,6 +54,8 @@ public class CreazioneContattoController implements Initializable {
     private Button saveNewButton;
     @FXML
     private Button cancelNewButton;
+    
+    private Rubrica rubrica;
 
     /**
      * @brief Inizializza il controller.
@@ -61,6 +63,7 @@ public class CreazioneContattoController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb){
+        rubrica = new Rubrica();
     }    
 
     /**
@@ -75,7 +78,6 @@ public class CreazioneContattoController implements Initializable {
     @FXML
     private void saveNewContact(ActionEvent event) throws IOException {
 
-    
         Contatto contatto = new Contatto();
         /*tmp.getNome().set(nameField.getText());
         tmp.setCognome(surnameField.textProperty());
@@ -83,7 +85,9 @@ public class CreazioneContattoController implements Initializable {
         tmp.getNumeriTelefonici().add(numberField1.textProperty());
         tmp.getEmail().add(emailField1.textProperty());*/
         contatto.setNome(nameField.getText());
-        Rubrica.add(contatto);
+        rubrica.add(contatto);
+        Stage stage = (Stage) cancelNewButton.getScene().getWindow();
+        stage.close();
     
     }
 
