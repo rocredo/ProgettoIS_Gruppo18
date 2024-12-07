@@ -79,12 +79,10 @@ public class CreazioneContattoController implements Initializable {
     private void saveNewContact(ActionEvent event) throws IOException {
 
         Contatto contatto = new Contatto();
-        /*tmp.getNome().set(nameField.getText());
-        tmp.setCognome(surnameField.textProperty());
-        tmp.setDomicilio(addressField.textProperty());
-        tmp.getNumeriTelefonici().add(numberField1.textProperty());
-        tmp.getEmail().add(emailField1.textProperty());*/
         contatto.setNome(nameField.getText());
+        contatto.setCognome(surnameField.getText());
+        contatto.addNumero(numberField1.getText());
+        contatto.addEmail(emailField1.getText());
         rubrica.add(contatto);
         Stage stage = (Stage) cancelNewButton.getScene().getWindow();
         stage.close();

@@ -6,6 +6,7 @@
 package it.unisa.diem.IS.gruppo18;
 
 import com.sun.corba.se.pept.transport.ContactInfoList;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +23,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 /**
@@ -78,9 +81,11 @@ public class SchermataBaseController implements Initializable{
         
         nameColumn.setCellValueFactory(new PropertyValueFactory("nome")); /////////
         surnameColumn.setCellValueFactory(new PropertyValueFactory("cognome"));
-        numberColumn.setCellValueFactory(new PropertyValueFactory("numeroTelefonico"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory("email"));
+        numberColumn.setCellValueFactory(new PropertyValueFactory("numeroTelefonico1"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory("email1"));
         addressColumn.setCellValueFactory(new PropertyValueFactory("domicilio"));
+        
+        //nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         
         contactTable.setItems(rubrica.getContactList());
         
@@ -106,13 +111,13 @@ public class SchermataBaseController implements Initializable{
     @FXML
     private void addContact(ActionEvent event) throws IOException {
         
-        /*Contatto contatto1 = new Contatto();
+        Contatto contatto1 = new Contatto();
         contatto1.setNome("pippo");
         Contatto contatto2 = new Contatto();
         contatto2.setNome("gino");
         contatto2.setIsfavorite();
         contactTable.getItems().add(contatto1);
-        contactTable.getItems().add(contatto2);*/
+        contactTable.getItems().add(contatto2);
         
         
         // Crea un FXMLLoader per caricare l'FXML e ottenere il controller
@@ -141,6 +146,9 @@ public class SchermataBaseController implements Initializable{
      */
     @FXML
     private void downloadContacts(ActionEvent event) {
+        FileChooser fc = new FileChooser();
+        File file = fc.showSaveDialog(searchBox.getParent().getScene().getWindow());
+        
     }
 
     /**
@@ -166,12 +174,12 @@ public class SchermataBaseController implements Initializable{
         
         if(!showingFavorite){
             ObservableList<Contatto> tmp = FXCollections.observableArrayList();
+            contactTable.setItems(tmp);
             for(Contatto c : contactTable.getItems()){
                 if(c.getIsFavorite()){
                     tmp.add(c);
                 }
             }
-            contactTable.setItems(tmp);
             showingFavorite=!showingFavorite;
         }
         
@@ -180,4 +188,9 @@ public class SchermataBaseController implements Initializable{
         
     }
     
+    @FXML
+    private void updateName(TableColumn.CellEditEvent<Contatto,String> event){
+        Contatto c = contactTable.getSelectionModel().getSelectedItem();
+        c.setNome(event.getNewValue());
+    }
 }

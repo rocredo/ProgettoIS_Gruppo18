@@ -116,6 +116,15 @@ public class Contatto{
         return this.isFavorite;
     }
 
+    public String getNumeroTelefonico1(){
+        if(numeriTelefonici.size()>0) return numeriTelefonici.get(0);
+        else return "";
+    }
+    
+    public String getEmail1(){
+        if(email.size()>0) return email.get(0);
+        else return "";
+    }
     // =====================================
     // Metodi Setter
     // =====================================
