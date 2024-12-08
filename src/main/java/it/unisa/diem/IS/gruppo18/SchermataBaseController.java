@@ -6,10 +6,19 @@
 package it.unisa.diem.IS.gruppo18;
 
 import com.sun.corba.se.pept.transport.ContactInfoList;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,6 +28,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -114,7 +124,7 @@ public class SchermataBaseController implements Initializable{
         Contatto contatto1 = new Contatto();
         contatto1.setNome("pippo");
         Contatto contatto2 = new Contatto();
-        contatto2.setNome("gino");
+        contatto2.setCognome("gino");
         contatto2.setIsfavorite();
         contactTable.getItems().add(contatto1);
         contactTable.getItems().add(contatto2);
@@ -145,10 +155,21 @@ public class SchermataBaseController implements Initializable{
      *
      */
     @FXML
-    private void downloadContacts(ActionEvent event) {
+    private void downloadContacts(ActionEvent event){
+        
         FileChooser fc = new FileChooser();
         File file = fc.showSaveDialog(searchBox.getParent().getScene().getWindow());
-        
+        //fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV","*.csv"));
+                
+        if(file!=null){
+            try(FileWriter fw = new FileWriter(file)){
+                for(Contatto c : rubrica.getContactList()){
+                    fw.write(c.toString());
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(SchermataBaseController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     /**
@@ -159,7 +180,34 @@ public class SchermataBaseController implements Initializable{
      *
      */
     @FXML
-    private void uploadContacts(ActionEvent event) {
+    private void uploadContacts(ActionEvent event){
+        
+        FileChooser fc = new FileChooser();
+        File file = fc.showOpenDialog(searchBox.getParent().getScene().getWindow());
+        
+        if(file!=null){
+            try(Scanner s = new Scanner(new FileReader(file))){
+                while(s.hasNext()){
+                    s.useDelimiter("[;\n]");
+                    s.useLocale(Locale.ITALY);
+                    Contatto contatto = new Contatto();
+                    contatto.setNome(s.next());
+                    contatto.setCognome(s.next());
+                    contatto.addNumero(s.next());
+                    contatto.addNumero(s.next());
+                    contatto.addNumero(s.next());
+                    contatto.addEmail(s.next());
+                    contatto.addEmail(s.next());
+                    contatto.addEmail(s.next());
+                    contatto.setDomicilio(s.next());
+                    rubrica.getContactList().add(contatto);
+                }
+                
+            } catch (IOException ex) {
+                Logger.getLogger(SchermataBaseController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
     }
 
     /**

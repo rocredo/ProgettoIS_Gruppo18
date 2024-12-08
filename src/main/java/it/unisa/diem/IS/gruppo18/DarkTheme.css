@@ -9,30 +9,30 @@ and open the template in the editor.
 */
 
 .button {
-    -fx-background-color: transparent; /* Sfondo puro bianco */
-    -fx-background-radius: 3; /* Smussatura leggera */
-    -fx-border-radius: 3; /* Smussatura del bordo */
-    -fx-border-color: #cfcfcf; /* Colore del bordo sottile */
-    -fx-border-width: 0.5; /* Spessore del bordo */
-    -fx-text-fill: #cfcfcf; /* Colore del testo */
-    -fx-padding: 5; /* Spaziatura interna */
+    -fx-background-color: transparent; 
+    -fx-background-radius: 3; 
+    -fx-border-radius: 3; 
+    -fx-border-color: #cfcfcf; 
+    -fx-border-width: 0.5; 
+    -fx-text-fill: #cfcfcf;
+    -fx-padding: 5;
 }
 
 .split-pane {
-    -fx-background-color: linear-gradient(to bottom right, #282828, #484848); /* Sfondo dello SplitPane */
+    -fx-background-color: linear-gradient(to bottom right, #282828, #484848);
 }
 
 .split-pane-divider {
-    -fx-background-color: linear-gradient(to bottom, #505050, #383838, #505050); /* Colore della barra separatrice */
-    -fx-pref-width: 8; /* Larghezza della barra separatrice */
+    -fx-background-color: linear-gradient(to bottom, #505050, #383838, #505050);
+    -fx-pref-width: 8;
 }
 
 .table-view .column-header {
-    -fx-background-color: #282828; /* Sfondo del box superiore */
-    -fx-text-fill: #fefefe; /* Colore del testo */
-    -fx-alignment: center; /* Allinea il testo al centro */
-    -fx-border-color: #cfcfcf; /* Bordo sottile per le intestazioni */
-    -fx-border-width: 0 0.2 1 0; /* Bordo solo nella parte inferiore */
+    -fx-background-color: #282828;
+    -fx-text-fill: #fefefe;
+    -fx-alignment: center; 
+    -fx-border-color: #cfcfcf; 
+    -fx-border-width: 0 0.2 1 0; 
 }
 
 .table-view .column-header .label{
@@ -42,13 +42,14 @@ and open the template in the editor.
 }
 
 .text-field {
-    -fx-background-color: transparent; /* Sfondo puro bianco */
-    -fx-background-radius: 3; /* Smussatura leggera */
-    -fx-border-radius: 3; /* Smussatura del bordo */
-    -fx-border-color: #cfcfcf; /* Colore del bordo sottile */
-    -fx-border-width: 0.5; /* Spessore del bordo */
-    -fx-text-fill: #cfcfcf; /* Colore del testo */
-    -fx-padding: 5; /* Spaziatura interna */
+    -fx-background-color: transparent; 
+    -fx-background-radius: 3;
+    -fx-border-radius: 3; 
+    -fx-border-color: #cfcfcf;
+    -fx-border-width: 0.5; 
+    -fx-text-fill: #cfcfcf; 
+    -fx-padding: 5; 
 }
+
 
 

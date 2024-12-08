@@ -64,6 +64,7 @@ public class CreazioneContattoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb){
         rubrica = new Rubrica();
+        saveNewButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
     }    
 
     /**
@@ -78,7 +79,7 @@ public class CreazioneContattoController implements Initializable {
     @FXML
     private void saveNewContact(ActionEvent event) throws IOException {
 
-        Contatto contatto = new Contatto();
+        Contatto contatto = new Contatto(); 
         contatto.setNome(nameField.getText());
         contatto.setCognome(surnameField.getText());
         contatto.addNumero(numberField1.getText());

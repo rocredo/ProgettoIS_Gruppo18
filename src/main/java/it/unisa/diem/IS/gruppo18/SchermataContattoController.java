@@ -17,9 +17,9 @@ import javafx.scene.control.TextField;
 /**
  * FXML Controller class
  *
- * @author mario
+ * @author Gruppo18
  */
-public class SchermataContattoViewController implements Initializable {
+public class SchermataContattoController implements Initializable {
 
     @FXML
     private Button modifyButton;
@@ -51,15 +51,24 @@ public class SchermataContattoViewController implements Initializable {
     private Label surnameLabel;
     @FXML
     private TextField surnameField;
+    
+    private Rubrica rubrica;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        rubrica = new Rubrica();
         // TODO
     }    
 
+    
+    @FXML
+    private void deleteContact(ActionEvent event) {
+        //rubrica.getContactList().remove();
+    }
+    
     @FXML
     private void modifyContact(ActionEvent event) {
     }

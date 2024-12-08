@@ -14,7 +14,7 @@ import javafx.beans.property.*;
  * @brief Modello per la gestione dei contatti.
  *
  * La classe Contatto contiene tutte le informazioni relative a un singolo contatto.
- * Include i metodi per accedere e modificare le informazioni del contatto..
+ * Include i metodi per accedere e modificare le informazioni del contatto.
  *
  * @author Gruppo18
  */
@@ -55,7 +55,7 @@ public class Contatto{
      * @brief Costruttore di default della classe Contatto.
      *
      * Inizializza i campi numeriTelefonici e email come liste vuote
-     * e imposta la variabile isFavorite a false.
+     * e imposta la variabile isFavorite a false. 
      */
     public Contatto(){
         this.numeriTelefonici = new LinkedList<>();
@@ -192,9 +192,16 @@ public class Contatto{
      */
     public String toString(){
         StringBuffer sb = new StringBuffer();
-        sb.append(nome);
+        
+        if(nome!=null){
+            sb.append(nome);
+        }
+        else sb.append("");
         sb.append(";");
-        sb.append(cognome);
+        if(cognome!=null){
+            sb.append(cognome);
+        }
+        else sb.append("");
         sb.append(";");
         
         int i = 0;
@@ -231,6 +238,19 @@ public class Contatto{
         
         sb.append("\n");
         return sb.toString();
+    }
+    
+    @Override
+    public boolean equals(Object obj){
+        
+        if(obj==null) return false;
+        if(this==obj) return true;
+        if(!(obj instanceof Contatto)) return false;
+        
+        Contatto tmp = (Contatto) obj;
+        return this.nome.equals(tmp.getNome()) && this.cognome.equals(tmp.getCognome()) && this.numeriTelefonici.equals(tmp.getNumeriTelefonici()) && this.email.equals((tmp.getEmail()))
+                && this.domicilio.equals(tmp.getDomicilio()) && (this.isFavorite == tmp.getIsFavorite());      
+        
     }
 
     
