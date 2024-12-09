@@ -87,7 +87,7 @@ public class Contatto{
      * @brief Ottiene la lista dei numeri di telefono del contatto.
      * @return List<String> numeriTelefonici.
      */
-    public List getNumeriTelefonici(){
+    public List<String> getNumeriTelefonici(){
         return this.numeriTelefonici;
     }
     
@@ -95,7 +95,7 @@ public class Contatto{
      * @brief Ottiene la lista degli indirizzi email del contatto.
      * @return List<String> email.
      */
-    public List getEmail(){
+    public List<String> getEmail(){
         return this.email;
     }
     
@@ -116,15 +116,14 @@ public class Contatto{
         return this.isFavorite;
     }
 
-    public String getNumeroTelefonico1(){
-        if(numeriTelefonici.size()>0) return numeriTelefonici.get(0);
-        else return "";
+    public String getPrimoNumero(){
+        return this.numeriTelefonici.get(0);
     }
     
-    public String getEmail1(){
-        if(email.size()>0) return email.get(0);
-        else return "";
+    public String getPrimaMail(){
+        return this.email.get(0);
     }
+    
     // =====================================
     // Metodi Setter
     // =====================================

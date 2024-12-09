@@ -79,11 +79,17 @@ public class CreazioneContattoController implements Initializable {
     @FXML
     private void saveNewContact(ActionEvent event) throws IOException {
 
-        Contatto contatto = new Contatto(); 
+        Contatto contatto = new Contatto();
+        
         contatto.setNome(nameField.getText());
         contatto.setCognome(surnameField.getText());
         contatto.addNumero(numberField1.getText());
+        contatto.addNumero(numberField2.getText());
+        contatto.addNumero(numberField3.getText());
         contatto.addEmail(emailField1.getText());
+        contatto.addEmail(emailField2.getText());
+        contatto.addEmail(emailField3.getText());
+        contatto.setDomicilio(addressField.getText());
         rubrica.add(contatto);
         Stage stage = (Stage) cancelNewButton.getScene().getWindow();
         stage.close();

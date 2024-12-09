@@ -91,24 +91,42 @@ public class SchermataBaseController implements Initializable{
         
         nameColumn.setCellValueFactory(new PropertyValueFactory("nome")); /////////
         surnameColumn.setCellValueFactory(new PropertyValueFactory("cognome"));
-        numberColumn.setCellValueFactory(new PropertyValueFactory("numeroTelefonico1"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory("email1"));
+        numberColumn.setCellValueFactory(new PropertyValueFactory("primoNumero"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory("primaMail"));
         addressColumn.setCellValueFactory(new PropertyValueFactory("domicilio"));
         
         //nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         
         contactTable.setItems(rubrica.getContactList());
         
-        /*contactTable.setOnMouseClicked(event -> {
+        contactTable.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2) { // Doppio clic
             Contatto selectedContact = contactTable.getSelectionModel().getSelectedItem();
             if (selectedContact != null) {
-                openContactDetailWindow(selectedContact);
+                showContact(selectedContact);
             }
         }
-        });*/
+        });
     }
+    
+    private void showContact(Contatto contact) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("SchermataContattoView.fxml"));
+            Parent root = loader.load();
 
+            // Passa i dati al controller della finestra di dettaglio
+            SchermataContattoController controller = loader.getController();
+            controller.setContact(contact);
+
+            // Configura e mostra la finestra
+            Stage stage = new Stage();
+            stage.setTitle("Dettagli Contatto");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * @brief Apre una nuova finestra per aggiungere un contatto.
@@ -121,21 +139,9 @@ public class SchermataBaseController implements Initializable{
     @FXML
     private void addContact(ActionEvent event) throws IOException {
         
-        Contatto contatto1 = new Contatto();
-        contatto1.setNome("pippo");
-        Contatto contatto2 = new Contatto();
-        contatto2.setCognome("gino");
-        contatto2.setIsfavorite();
-        contactTable.getItems().add(contatto1);
-        contactTable.getItems().add(contatto2);
-        
-        
         // Crea un FXMLLoader per caricare l'FXML e ottenere il controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CreazioneContattoView.fxml"));
         Parent root = loader.load(); // Carica l'FXML
-        // Ottieni il controller associato
-        /*CreazioneContattoController controller = loader.getController();
-        controller.setList(contactList); //Se non va settata quindi, quando va ?*/
 
         //Crea e mostra la nuova finestra
         Scene scene = new Scene(root);
@@ -220,7 +226,12 @@ public class SchermataBaseController implements Initializable{
     @FXML
     private void showFavorite(ActionEvent event) {
         
-        if(!showingFavorite){
+        StringBuffer sb = new StringBuffer();
+        for(Contatto c : rubrica.getContactList()){
+            System.out.println(c.toString());
+        }
+        
+        /*if(!showingFavorite){
             ObservableList<Contatto> tmp = FXCollections.observableArrayList();
             contactTable.setItems(tmp);
             for(Contatto c : contactTable.getItems()){
@@ -232,13 +243,13 @@ public class SchermataBaseController implements Initializable{
         }
         
         contactTable.setItems(rubrica.getContactList());
-        showingFavorite=!showingFavorite;
+        showingFavorite=!showingFavorite;*/
         
     }
     
-    @FXML
+    /*@FXML
     private void updateName(TableColumn.CellEditEvent<Contatto,String> event){
         Contatto c = contactTable.getSelectionModel().getSelectedItem();
         c.setNome(event.getNewValue());
-    }
+    }*/
 }

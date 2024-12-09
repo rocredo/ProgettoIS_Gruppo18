@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -53,32 +54,62 @@ public class SchermataContattoController implements Initializable {
     private TextField surnameField;
     
     private Rubrica rubrica;
-
+    private Contatto contatto;
+    private boolean isEditing;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         rubrica = new Rubrica();
-        // TODO
+        
     }    
 
+    public void setContact(Contatto contatto){
+        this.contatto = contatto;
+        nameField.setText(contatto.getNome());
+        surnameField.setText(contatto.getCognome());
+        numberField1.setText(contatto.getNumeriTelefonici().get(0));
+        numberField2.setText(contatto.getNumeriTelefonici().get(1));
+        numberField3.setText(contatto.getNumeriTelefonici().get(2));
+        emailField1.setText(contatto.getEmail().get(0));
+        emailField2.setText(contatto.getEmail().get(1));
+        emailField3.setText(contatto.getEmail().get(2));
+        addressField.setText(contatto.getDomicilio());
+    }
     
     @FXML
     private void deleteContact(ActionEvent event) {
-        //rubrica.getContactList().remove();
+        rubrica.getContactList().remove(contatto);
     }
     
     @FXML
     private void modifyContact(ActionEvent event) {
+        
+        isEditing=!isEditing;
+        if(isEditing){
+            modifyButton.textProperty().set("Salva");
+            nameField.setEditable(true);
+            surnameField.setEditable(true);
+        }else{
+            modifyButton.textProperty().set("Modifica");
+            isEditing=!isEditing;
+            contatto.setNome(nameField.getText());
+            contatto.setCognome(surnameField.getText());
+        }
+        
     }
 
     @FXML
     private void addToFavorite(ActionEvent event) {
+        rubrica.getContactList().remove(contatto);
     }
 
     @FXML
     private void exit(ActionEvent event) {
+         Stage stage = (Stage) addressField.getScene().getWindow();
+        stage.close();
     }
     
 }
