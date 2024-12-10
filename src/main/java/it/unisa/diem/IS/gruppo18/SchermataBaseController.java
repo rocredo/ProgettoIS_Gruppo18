@@ -116,7 +116,7 @@ public class SchermataBaseController implements Initializable{
 
             // Passa i dati al controller della finestra di dettaglio
             SchermataContattoController controller = loader.getController();
-            controller.setContact(contact);
+            controller.setContact(contact,contactTable);
 
             // Configura e mostra la finestra
             Stage stage = new Stage();
@@ -139,7 +139,7 @@ public class SchermataBaseController implements Initializable{
     @FXML
     private void addContact(ActionEvent event) throws IOException {
         
-        // Crea un FXMLLoader per caricare l'FXML e ottenere il controller
+        //Crea un FXMLLoader per caricare l'FXML e ottenere il controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("CreazioneContattoView.fxml"));
         Parent root = loader.load(); // Carica l'FXML
 
@@ -226,24 +226,19 @@ public class SchermataBaseController implements Initializable{
     @FXML
     private void showFavorite(ActionEvent event) {
         
-        StringBuffer sb = new StringBuffer();
-        for(Contatto c : rubrica.getContactList()){
-            System.out.println(c.toString());
-        }
-        
-        /*if(!showingFavorite){
+        if(!showingFavorite){
             ObservableList<Contatto> tmp = FXCollections.observableArrayList();
-            contactTable.setItems(tmp);
             for(Contatto c : contactTable.getItems()){
                 if(c.getIsFavorite()){
                     tmp.add(c);
                 }
             }
+            contactTable.setItems(tmp);
             showingFavorite=!showingFavorite;
-        }
-        
+        }else{
         contactTable.setItems(rubrica.getContactList());
-        showingFavorite=!showingFavorite;*/
+        showingFavorite=!showingFavorite;
+        }
         
     }
     

@@ -24,7 +24,7 @@ public class Contatto{
      * @var nome
      * @brief Nome del contatto.
      */
-    private String nome;
+    private StringProperty nome;
     /**
      * @var cognome
      * @brief Cognome del contatto.
@@ -58,6 +58,7 @@ public class Contatto{
      * e imposta la variabile isFavorite a false. 
      */
     public Contatto(){
+        this.nome = new SimpleStringProperty();
         this.numeriTelefonici = new LinkedList<>();
         this.email = new LinkedList<>();
         this.isFavorite = false;
@@ -71,7 +72,7 @@ public class Contatto{
      * @brief Ottiene il nome del contatto.
      * @return String nome.
      */
-    public String getNome(){
+    public StringProperty getNome(){
         return this.nome;
     }
     
@@ -133,7 +134,7 @@ public class Contatto{
      * @param nome Nome del contatto.
      */
     public void setNome(String nome){
-        this.nome = nome;
+        this.nome.set(nome);
     }
     
 

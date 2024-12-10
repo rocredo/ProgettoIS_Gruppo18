@@ -7,11 +7,14 @@ package it.unisa.diem.IS.gruppo18;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -55,6 +58,7 @@ public class SchermataContattoController implements Initializable {
     
     private Rubrica rubrica;
     private Contatto contatto;
+    private TableView<Contatto> contactTable;
     private boolean isEditing;
     
     /**
@@ -62,13 +66,17 @@ public class SchermataContattoController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        isEditing = false;
         rubrica = new Rubrica();
+        
+        modifyButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
+        /*favoriteButton.styleProperty()*/
         
     }    
 
-    public void setContact(Contatto contatto){
+    public void setContact(Contatto contatto, TableView<Contatto> contactTable){
         this.contatto = contatto;
-        nameField.setText(contatto.getNome());
+        nameField.setText(contatto.getNome().get());
         surnameField.setText(contatto.getCognome());
         numberField1.setText(contatto.getNumeriTelefonici().get(0));
         numberField2.setText(contatto.getNumeriTelefonici().get(1));
@@ -77,6 +85,7 @@ public class SchermataContattoController implements Initializable {
         emailField2.setText(contatto.getEmail().get(1));
         emailField3.setText(contatto.getEmail().get(2));
         addressField.setText(contatto.getDomicilio());
+        this.contactTable = contactTable;
     }
     
     @FXML
@@ -86,24 +95,26 @@ public class SchermataContattoController implements Initializable {
     
     @FXML
     private void modifyContact(ActionEvent event) {
+       
+        isEditing=!isEditing;        
         
-        isEditing=!isEditing;
         if(isEditing){
             modifyButton.textProperty().set("Salva");
             nameField.setEditable(true);
             surnameField.setEditable(true);
         }else{
             modifyButton.textProperty().set("Modifica");
-            isEditing=!isEditing;
+            nameField.setEditable(false);
+            surnameField.setEditable(false);
             contatto.setNome(nameField.getText());
             contatto.setCognome(surnameField.getText());
+            contactTable.setItems(rubrica.getContactList());
         }
-        
     }
 
     @FXML
     private void addToFavorite(ActionEvent event) {
-        rubrica.getContactList().remove(contatto);
+        contatto.setIsfavorite();
     }
 
     @FXML
