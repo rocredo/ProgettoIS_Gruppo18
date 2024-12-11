@@ -26,10 +26,11 @@
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
                      <children>
                         <Button fx:id="modifyButton" mnemonicParsing="false" onAction="#modifyContact" stylesheets="@DarkTheme.css" text="Modifica" />
                         <Button fx:id="favoriteButton" mnemonicParsing="false" onAction="#addToFavorite" stylesheets="@DarkTheme.css" text="Preferito" />
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteContact" style="-fx-background-color: #cf6565;" text="Elimina" />
                         <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" stylesheets="@DarkTheme.css" text="Esci" />
                      </children>
                   </HBox>

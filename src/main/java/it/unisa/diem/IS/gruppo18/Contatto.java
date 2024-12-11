@@ -5,6 +5,7 @@
  */
 package it.unisa.diem.IS.gruppo18;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 import javafx.beans.property.*;
@@ -18,13 +19,13 @@ import javafx.beans.property.*;
  *
  * @author Gruppo18
  */
-public class Contatto{
+public class Contatto implements Serializable{
     
     /**
      * @var nome
      * @brief Nome del contatto.
      */
-    private StringProperty nome;
+    private String nome;
     /**
      * @var cognome
      * @brief Cognome del contatto.
@@ -58,7 +59,6 @@ public class Contatto{
      * e imposta la variabile isFavorite a false. 
      */
     public Contatto(){
-        this.nome = new SimpleStringProperty();
         this.numeriTelefonici = new LinkedList<>();
         this.email = new LinkedList<>();
         this.isFavorite = false;
@@ -72,7 +72,7 @@ public class Contatto{
      * @brief Ottiene il nome del contatto.
      * @return String nome.
      */
-    public StringProperty getNome(){
+    public String getNome(){
         return this.nome;
     }
     
@@ -118,11 +118,21 @@ public class Contatto{
     }
 
     public String getPrimoNumero(){
-        return this.numeriTelefonici.get(0);
+        for(String s : numeriTelefonici){
+            if(!s.isEmpty()){
+                return s;
+            }
+        }
+        return "";
     }
     
     public String getPrimaMail(){
-        return this.email.get(0);
+        for(String s : email){
+            if(!s.isEmpty()){
+                return s;
+            }
+        }
+        return "";
     }
     
     // =====================================
@@ -134,7 +144,7 @@ public class Contatto{
      * @param nome Nome del contatto.
      */
     public void setNome(String nome){
-        this.nome.set(nome);
+        this.nome = nome;
     }
     
 

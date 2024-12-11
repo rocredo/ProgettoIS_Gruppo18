@@ -1,5 +1,15 @@
 package it.unisa.diem.IS.gruppo18;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -51,4 +61,25 @@ public class Rubrica {
         contactList.add(contatto);
     }
     
+    public static void salvaFileBinario(){
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("bin"))){
+            List<Contatto> tmp = new LinkedList<>(contactList);
+            oos.writeObject(tmp);
+        }
+        catch(IOException e){
+            System.err.println("Errore nel salvataggio del file serializzato!\n");
+        }
+    }
+    
+    public static void caricaFileBinario(){
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("bin"))){
+            ObservableList tmp = FXCollections.observableArrayList((List<Contatto>) ois.readObject());
+            contactList = tmp;
+        }
+        catch(IOException e){
+            System.err.println("Errore nel caricamento del file serializzato!\n");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Rubrica.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

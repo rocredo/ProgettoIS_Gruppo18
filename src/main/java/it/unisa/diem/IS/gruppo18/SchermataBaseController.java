@@ -60,7 +60,9 @@ public class SchermataBaseController implements Initializable{
     @FXML
     private Button showFavoriteButton;
     @FXML
-    private Button refresh;
+    private Button refreshButton;
+    @FXML
+    private Button searchButton;
     @FXML
     private TableView<Contatto> contactTable;
     @FXML
@@ -75,6 +77,7 @@ public class SchermataBaseController implements Initializable{
     private TableColumn<Contatto, String> addressColumn;
     
     private boolean showingFavorite;
+    private boolean isSearching;
     private Rubrica rubrica;
 
     /**
@@ -108,6 +111,8 @@ public class SchermataBaseController implements Initializable{
         }
         });
     }
+    
+    
     
     private void showContact(Contatto contact) {
         try {
@@ -224,11 +229,12 @@ public class SchermataBaseController implements Initializable{
      *
      */
     @FXML
-    private void showFavorite(ActionEvent event) {
+    private void showFavorite(ActionEvent event){
         
         if(!showingFavorite){
+            this.showFavoriteButton.setStyle("-fx-background-color: #FFDB58;-fx-text-fill: #282828;");
             ObservableList<Contatto> tmp = FXCollections.observableArrayList();
-            for(Contatto c : contactTable.getItems()){
+            for(Contatto c : rubrica.getContactList()){
                 if(c.getIsFavorite()){
                     tmp.add(c);
                 }
@@ -236,10 +242,35 @@ public class SchermataBaseController implements Initializable{
             contactTable.setItems(tmp);
             showingFavorite=!showingFavorite;
         }else{
+        this.showFavoriteButton.setStyle("-fx-background-color: transparent;-fx-text-fill: #cfcfcf;");
         contactTable.setItems(rubrica.getContactList());
         showingFavorite=!showingFavorite;
         }
         
+    }
+    
+    @FXML
+    private void search(ActionEvent event){
+        
+        if(!(searchBox.getText().isEmpty())){
+            this.searchButton.setStyle("-fx-background-color: #FFDB58;-fx-text-fill: #282828;");
+            ObservableList<Contatto> tmp = FXCollections.observableArrayList();
+            for(Contatto c : rubrica.getContactList()){
+                if(c.getNome().toLowerCase().contains(searchBox.getText().toLowerCase())){
+                    tmp.add(c);
+                }
+            }
+            contactTable.setItems(tmp);
+        }
+        else{
+            this.searchButton.setStyle("-fx-background-color: transparent;-fx-text-fill: #cfcfcf;");
+            contactTable.setItems(rubrica.getContactList());
+        }
+    }
+    
+    @FXML
+    private void refresh(ActionEvent event) throws IOException{
+        contactTable.refresh();
     }
     
     /*@FXML

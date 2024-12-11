@@ -9,6 +9,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
+import javafx.beans.binding.BooleanBinding;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -64,7 +68,52 @@ public class CreazioneContattoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb){
         rubrica = new Rubrica();
-        saveNewButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
+        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        
+        BooleanBinding isEmail1 = emailField1.textProperty().isNotEmpty().and(
+            new BooleanBinding(){
+                
+                {
+                    super.bind(emailField1.textProperty());
+                }
+                
+                @Override
+                protected boolean computeValue(){
+                    return (!pattern.matcher(emailField1.textProperty().get()).matches());
+                }
+                    
+            });
+        
+        BooleanBinding isEmail2 = emailField2.textProperty().isNotEmpty().and(
+            new BooleanBinding(){
+                
+                {
+                    super.bind(emailField2.textProperty());
+                }
+                
+                @Override
+                protected boolean computeValue(){
+                    return (!pattern.matcher(emailField2.textProperty().get()).matches());
+                }
+                    
+            });
+        
+        BooleanBinding isEmail3 = emailField3.textProperty().isNotEmpty().and(
+            new BooleanBinding(){
+                
+                {
+                    super.bind(emailField3.textProperty());
+                }
+                
+                @Override
+                protected boolean computeValue(){
+                    return (!pattern.matcher(emailField3.textProperty().get()).matches());
+                }
+                    
+            });
+        
+        saveNewButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()).or(isEmail1));
     }    
 
     /**
@@ -91,6 +140,7 @@ public class CreazioneContattoController implements Initializable {
         contatto.addEmail(emailField3.getText());
         contatto.setDomicilio(addressField.getText());
         rubrica.add(contatto);
+        Rubrica.salvaFileBinario();
         Stage stage = (Stage) cancelNewButton.getScene().getWindow();
         stage.close();
     
