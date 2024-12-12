@@ -256,7 +256,7 @@ public class SchermataBaseController implements Initializable{
             this.searchButton.setStyle("-fx-background-color: #FFDB58;-fx-text-fill: #282828;");
             ObservableList<Contatto> tmp = FXCollections.observableArrayList();
             for(Contatto c : rubrica.getContactList()){
-                if(c.getNome().toLowerCase().contains(searchBox.getText().toLowerCase())){
+                if(c.getNome().toLowerCase().contains(searchBox.getText().toLowerCase()) || c.getCognome().toLowerCase().contains(searchBox.getText().toLowerCase())){
                     tmp.add(c);
                 }
             }
