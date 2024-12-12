@@ -78,7 +78,6 @@ public class SchermataBaseController implements Initializable{
     
     private boolean showingFavorite;
     private boolean isSearching;
-    private Rubrica rubrica;
 
     /**
      * @brief Inizializza il controller e configura la tabella dei contatti.
@@ -90,17 +89,14 @@ public class SchermataBaseController implements Initializable{
     public void initialize(URL url, ResourceBundle rb) {
         
         showingFavorite = false;
-        rubrica = new Rubrica();
-        
+
         nameColumn.setCellValueFactory(new PropertyValueFactory("nome")); /////////
         surnameColumn.setCellValueFactory(new PropertyValueFactory("cognome"));
         numberColumn.setCellValueFactory(new PropertyValueFactory("primoNumero"));
         emailColumn.setCellValueFactory(new PropertyValueFactory("primaMail"));
         addressColumn.setCellValueFactory(new PropertyValueFactory("domicilio"));
         
-        //nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        
-        contactTable.setItems(rubrica.getContactList());
+        contactTable.setItems(Rubrica.getContactList());
         
         contactTable.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2) { // Doppio clic
@@ -174,7 +170,7 @@ public class SchermataBaseController implements Initializable{
                 
         if(file!=null){
             try(FileWriter fw = new FileWriter(file)){
-                for(Contatto c : rubrica.getContactList()){
+                for(Contatto c : Rubrica.getContactList()){
                     fw.write(c.toString());
                 }
             } catch (IOException ex) {
@@ -211,7 +207,7 @@ public class SchermataBaseController implements Initializable{
                     contatto.addEmail(s.next());
                     contatto.addEmail(s.next());
                     contatto.setDomicilio(s.next());
-                    rubrica.getContactList().add(contatto);
+                    Rubrica.add(contatto);
                 }
                 
             } catch (IOException ex) {
@@ -234,7 +230,7 @@ public class SchermataBaseController implements Initializable{
         if(!showingFavorite){
             this.showFavoriteButton.setStyle("-fx-background-color: #FFDB58;-fx-text-fill: #282828;");
             ObservableList<Contatto> tmp = FXCollections.observableArrayList();
-            for(Contatto c : rubrica.getContactList()){
+            for(Contatto c : Rubrica.getContactList()){
                 if(c.getIsFavorite()){
                     tmp.add(c);
                 }
@@ -243,7 +239,7 @@ public class SchermataBaseController implements Initializable{
             showingFavorite=!showingFavorite;
         }else{
         this.showFavoriteButton.setStyle("-fx-background-color: transparent;-fx-text-fill: #cfcfcf;");
-        contactTable.setItems(rubrica.getContactList());
+        contactTable.setItems(Rubrica.getContactList());
         showingFavorite=!showingFavorite;
         }
         
@@ -255,7 +251,7 @@ public class SchermataBaseController implements Initializable{
         if(!(searchBox.getText().isEmpty())){
             this.searchButton.setStyle("-fx-background-color: #FFDB58;-fx-text-fill: #282828;");
             ObservableList<Contatto> tmp = FXCollections.observableArrayList();
-            for(Contatto c : rubrica.getContactList()){
+            for(Contatto c : Rubrica.getContactList()){
                 if(c.getNome().toLowerCase().contains(searchBox.getText().toLowerCase()) || c.getCognome().toLowerCase().contains(searchBox.getText().toLowerCase())){
                     tmp.add(c);
                 }
@@ -264,7 +260,7 @@ public class SchermataBaseController implements Initializable{
         }
         else{
             this.searchButton.setStyle("-fx-background-color: transparent;-fx-text-fill: #cfcfcf;");
-            contactTable.setItems(rubrica.getContactList());
+            contactTable.setItems(Rubrica.getContactList());
         }
     }
     

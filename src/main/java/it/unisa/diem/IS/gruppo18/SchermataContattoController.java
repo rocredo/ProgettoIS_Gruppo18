@@ -62,7 +62,7 @@ public class SchermataContattoController implements Initializable {
     @FXML
     private TextField surnameField;
     
-    private Rubrica rubrica;
+
     private Contatto contatto;
     private TableView<Contatto> contactTable;
     private boolean isEditing;
@@ -72,9 +72,9 @@ public class SchermataContattoController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        isEditing = false;
-        rubrica = new Rubrica();
         
+        isEditing = false;
+
         modifyButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
     
         
@@ -100,7 +100,7 @@ public class SchermataContattoController implements Initializable {
     
     @FXML
     private void deleteContact(ActionEvent event) {
-        rubrica.getContactList().remove(contatto);
+        Rubrica.remove(contatto);
         Rubrica.salvaFileBinario();
         Stage stage = (Stage) addressField.getScene().getWindow();
         stage.close();
@@ -135,7 +135,7 @@ public class SchermataContattoController implements Initializable {
             contatto.getEmail().set(1, emailField2.getText());
             contatto.getEmail().set(2, emailField3.getText());
             contatto.setDomicilio(addressField.getText());
-            contactTable.setItems(rubrica.getContactList());
+            contactTable.setItems(Rubrica.getContactList());
             Rubrica.salvaFileBinario();
         }
     }

@@ -203,15 +203,9 @@ public class Contatto implements Serializable{
     public String toString(){
         StringBuffer sb = new StringBuffer();
         
-        if(nome!=null){
-            sb.append(nome);
-        }
-        else sb.append("");
+        sb.append(nome);
         sb.append(";");
-        if(cognome!=null){
-            sb.append(cognome);
-        }
-        else sb.append("");
+        sb.append(cognome);
         sb.append(";");
         
         int i = 0;
@@ -241,11 +235,8 @@ public class Contatto implements Serializable{
             }
         }
         
-        if(domicilio!=null){
         sb.append(domicilio);
-        }
-        else sb.append("");
-        
+
         sb.append("\n");
         return sb.toString();
     }

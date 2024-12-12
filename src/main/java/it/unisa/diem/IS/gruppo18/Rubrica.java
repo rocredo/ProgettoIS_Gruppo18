@@ -34,8 +34,8 @@ public class Rubrica {
      */
     private static ObservableList<Contatto> contactList = FXCollections.observableArrayList();
     
-    public Rubrica(){
-    }
+    /*public Rubrica(){
+    }*/
 
     /**
      * @brief Restituisce la lista dei contatti.
@@ -45,7 +45,7 @@ public class Rubrica {
      * 
      * @return ObservableList<Contatto>.
      */
-    public ObservableList<Contatto> getContactList() {
+    public static ObservableList<Contatto> getContactList() {
         return contactList;
     }
 
@@ -57,8 +57,12 @@ public class Rubrica {
      * 
      * @param contatto Oggetto della classe Contatto da aggiungere alla rubrica.
      */
-    public void add(Contatto contatto){
+    public static void add(Contatto contatto){
         contactList.add(contatto);
+    }
+    
+    public static void remove(Contatto contatto){
+        contactList.remove(contatto);
     }
     
     public static void salvaFileBinario(){

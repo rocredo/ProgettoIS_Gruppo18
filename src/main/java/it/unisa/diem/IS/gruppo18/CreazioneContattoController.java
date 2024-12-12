@@ -58,8 +58,6 @@ public class CreazioneContattoController implements Initializable {
     private Button saveNewButton;
     @FXML
     private Button cancelNewButton;
-    
-    private Rubrica rubrica;
 
     /**
      * @brief Inizializza il controller.
@@ -67,8 +65,8 @@ public class CreazioneContattoController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        rubrica = new Rubrica();
-        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+        
+        /*String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
         Pattern pattern = Pattern.compile(emailRegex);
         
         BooleanBinding isEmail1 = emailField1.textProperty().isNotEmpty().and(
@@ -111,9 +109,9 @@ public class CreazioneContattoController implements Initializable {
                     return (!pattern.matcher(emailField3.textProperty().get()).matches());
                 }
                     
-            });
+            });*/
         
-        saveNewButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()).or(isEmail1));
+        saveNewButton.disableProperty().bind(nameField.textProperty().isEmpty().and(surnameField.textProperty().isEmpty()));
     }    
 
     /**
@@ -139,7 +137,7 @@ public class CreazioneContattoController implements Initializable {
         contatto.addEmail(emailField2.getText());
         contatto.addEmail(emailField3.getText());
         contatto.setDomicilio(addressField.getText());
-        rubrica.add(contatto);
+        Rubrica.add(contatto);
         Rubrica.salvaFileBinario();
         Stage stage = (Stage) cancelNewButton.getScene().getWindow();
         stage.close();
