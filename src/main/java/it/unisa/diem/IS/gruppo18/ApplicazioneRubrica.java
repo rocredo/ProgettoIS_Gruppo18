@@ -21,11 +21,31 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- *
+ * @class ApplicazioneRubrica
+ * 
+ * @brief La classe ApplicazioneRubrica si occupa di istanziare la rubrica
+ * all'avvio dell'applicazione, attraverso il metodo start().
+ * 
  * @author Gruppo18
- * @brief Questa classe si occupa di istanziare l'interfaccia grafica della rubrica.
  */
+
 public class ApplicazioneRubrica extends Application {
+    
+    /**
+     * @brief Istanzia l'interfaccia della Rubrica.
+     * 
+     * Il metodo start() si occupa di istanziare l'interfaccia della 
+     * rubrica su una finestra dedicata caricando eventuali file binari 
+     * contenenti contatti pre esistenti.
+     * 
+     * @pre L'utente avvia il programma
+     * @post La finestra contente la Rubrica si apre
+     * 
+     * @see Rubrica
+     * @param stage
+     * @throws IOException
+     * 
+     */
     
     @Override
     public void start(Stage stage) throws IOException {
@@ -39,9 +59,9 @@ public class ApplicazioneRubrica extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
     /**
-     * @param args the command line arguments
+     * @brief Main dell'applicazione.
+     * @param args 
      */
     public static void main(String[] args) {
         launch(args);

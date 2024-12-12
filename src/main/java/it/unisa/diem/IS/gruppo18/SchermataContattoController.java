@@ -23,8 +23,11 @@ import javafx.scene.layout.Background;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
+ * @class SchermataContattoController
+ * 
+ * @brief Questa classe si occupa di gestire le modifiche su contatti pre
+ * esistenti all'interno della rubrica. 
+ * 
  * @author Gruppo18
  */
 public class SchermataContattoController implements Initializable {
@@ -68,8 +71,10 @@ public class SchermataContattoController implements Initializable {
     private boolean isEditing;
     
     /**
-     * Initializes the controller class.
+     * @brief Inizializza il controller.
+     * Viene chiamato automaticamente quando la scena viene caricata.
      */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -79,7 +84,16 @@ public class SchermataContattoController implements Initializable {
     
         
     }    
-
+    
+    /**
+     * @brief Metodo per salvare le modifiche sul Contatto
+     * 
+     * @pre L'input deve essere un oggetto di classe Contatto
+     * @post Il metodo modifica gli attributi dell'oggetto ricevuto in input
+     * @param contatto Oggetto di classe Contatto da modificare
+     * @param contactTable Riferimento della contactTable
+     */
+    
     public void setContact(Contatto contatto, TableView<Contatto> contactTable){
         this.contatto = contatto;
         nameField.setText(contatto.getNome());
@@ -98,6 +112,13 @@ public class SchermataContattoController implements Initializable {
         else this.favoriteButton.setStyle("-fx-background-color: transparent;");
     }
     
+    /**
+     * @brief Metodo per l'eliminazione di un Contatto in Rubrica
+     * @pre L'utente clicca sul tasto "Elimina"
+     * @post Il contatto viene eliminato dalla Rubrica
+     * @see Rubrica.remove()
+     * 
+     */
     @FXML
     private void deleteContact(ActionEvent event) {
         Rubrica.remove(contatto);
@@ -105,6 +126,15 @@ public class SchermataContattoController implements Initializable {
         Stage stage = (Stage) addressField.getScene().getWindow();
         stage.close();
     }
+    
+    /**
+     * @brief Metodo per abilitare o disabilitare la modifica dei campi nome, 
+     * cognome, email, telefono e domicilio. 
+     * @pre L'utente clicca sul tasto Modifica
+     * @post Il tasto "Modifica" cambia nome in "Salva", o viceversa, e
+     * i campi contenenti le informazioni del contatto diventano modificabili,
+     * o vengono congelati.
+     */
     
     @FXML
     private void modifyContact(ActionEvent event) {
@@ -139,7 +169,16 @@ public class SchermataContattoController implements Initializable {
             Rubrica.salvaFileBinario();
         }
     }
-
+    
+    /**
+     * @brief Metodo per aggiungere o rimuovere un Contatto alla lista dei 
+     * contatti preferiti.
+     * @pre L'utente clicca sul tasto "Preferito"
+     * @post Il tasto preferito diventa giallo ed il contatto viene aggiunto
+     * alla lista dei contatti preferiti oppure il tasto diventa trasparente
+     * ed il contatto viene rimosso dalla lista dei contatti preferiti.
+     */
+    
     @FXML
     private void addToFavorite(ActionEvent event) {
         contatto.setIsfavorite();
@@ -150,6 +189,12 @@ public class SchermataContattoController implements Initializable {
         else this.favoriteButton.setStyle("-fx-background-color: transparent;");
     }
 
+    /**
+     * @brief Metodo per chiudere la finestra del contatto
+     * @pre L'utente clicca sul tasto "Esci"
+     * @post La finestra del contatto viene chiusa
+     * 
+     */
     @FXML
     private void exit(ActionEvent event) {
         Stage stage = (Stage) addressField.getScene().getWindow();

@@ -26,6 +26,7 @@ import javafx.stage.Stage;
 
 /**
  * @class CreazioneContattoController
+ * 
  * @brief Controller per l'interfaccia di creazione di un nuovo contatto.
  *
  * Gestisce l'interfaccia utente e la logica per l'aggiunta di un nuovo contatto.
@@ -121,6 +122,10 @@ public class CreazioneContattoController implements Initializable {
      * i rispettivi cambi e lo aggiunge alla rubrica. Viene lanciato cliccando sul pulsante
      * "Salva".
      * 
+     * @pre L'utente, dopo aver compilato almeno il campo nome o il campo cognome
+     * clicca sul tasto "Salva".
+     * @post Il Contatto viene salvato nella Rubrica.
+     * 
      * @throws IOException Se ci sono problemi con l'IO.
      */
     @FXML
@@ -149,6 +154,10 @@ public class CreazioneContattoController implements Initializable {
      *
      * Chiude la finestra corrente. Viene lanciato cliccando sul pulsante "Annulla".
      *
+     * @pre L'utente clicca sul tasto "Annulla"
+     * @post La creazione del contatto viene annullata e la finestra viene
+     * chiusa
+     * 
      */
     @FXML
     private void cancelNewContact(ActionEvent event) {

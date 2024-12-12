@@ -14,8 +14,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 /**
- * @Class Rubrica
- * @brief Modello per la gestione della rubrica.
+ * @class Rubrica
+ * @brief Classe che si occupa della gestione della rubrica.
  *
  * Si occupa della gestione dei dati relativi ai contatti della rubrica e
  * fornisce i metodi per accedervi e modificarli.
@@ -34,9 +34,6 @@ public class Rubrica {
      */
     private static ObservableList<Contatto> contactList = FXCollections.observableArrayList();
     
-    /*public Rubrica(){
-    }*/
-
     /**
      * @brief Restituisce la lista dei contatti.
      * 
@@ -55,16 +52,38 @@ public class Rubrica {
      * Aggiunge un oggetto della classe Contatto alla lista dei contatti. 
      * Questo metodo viene chiamato dal controller per aggiornare la lista.
      * 
+     * @pre Input: Oggetto di classe Contatto.
+     * @post L'oggetto di classe Contatto viene aggiunto alla Rubrica.
+     * 
      * @param contatto Oggetto della classe Contatto da aggiungere alla rubrica.
      */
     public static void add(Contatto contatto){
         contactList.add(contatto);
     }
     
+    /**
+     * @brief Rimuove un contatto dalla rubrica.
+     * 
+     * Rimuove un oggetto di classe Contatto dalla lista dei contatti. 
+     * Questo metodo viene chiamato dal controller per aggiornare la lista.
+     * 
+     * @pre Input: Oggetto di classe Contatto presente nella Rubrica.
+     * @post L'oggetto di classe Contatto viene eliminato dalla Rubrica.
+     * 
+     * @param contatto Oggetto della classe Contatto da rimuovere dalla rubrica.
+     */
     public static void remove(Contatto contatto){
         contactList.remove(contatto);
     }
     
+    /**
+     * @brief Salva il file bin
+     * 
+     * Salva un file binario ricaricabile al successivo avvio dell'applicazione
+     * in modo da visualizzare gli stessi contatti presenti al momento della
+     * chiusura.
+     * 
+     */
     public static void salvaFileBinario(){
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("bin"))){
             List<Contatto> tmp = new LinkedList<>(contactList);
@@ -74,6 +93,18 @@ public class Rubrica {
             System.err.println("Errore nel salvataggio del file serializzato!\n");
         }
     }
+    
+    /**
+     * @brief Carica il file bin
+     * 
+     * Carica un file binario in modo da visualizzare gli stessi contatti 
+     * presenti al momento della precedente chiusura dell'applicazione.
+     * 
+     * @pre Il file bin esiste e si trova nel path corretto.
+     * @post L'interfaccia della Rubrica si apre con all'interno dei contatti
+     * pre caricati.
+     * 
+     */
     
     public static void caricaFileBinario(){
         try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("bin"))){

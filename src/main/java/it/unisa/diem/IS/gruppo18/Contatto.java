@@ -12,7 +12,7 @@ import javafx.beans.property.*;
 
 /**
  * @class Contatto
- * @brief Modello per la gestione dei contatti.
+ * @brief Classe che di occupa dela gestione dei contatti.
  *
  * La classe Contatto contiene tutte le informazioni relative a un singolo contatto.
  * Include i metodi per accedere e modificare le informazioni del contatto.
@@ -53,7 +53,7 @@ public class Contatto implements Serializable{
     private boolean isFavorite;
     
     /**
-     * @brief Costruttore di default della classe Contatto.
+     * @brief Costruttore di oggetti della classe Contatto.
      *
      * Inizializza i campi numeriTelefonici e email come liste vuote
      * e imposta la variabile isFavorite a false. 
@@ -116,7 +116,10 @@ public class Contatto implements Serializable{
     public boolean getIsFavorite(){
         return this.isFavorite;
     }
-
+    /**
+     * @Brief Ritorna il primo numero in elenco del Contatto
+     * @return String PrimoNumero
+     */
     public String getPrimoNumero(){
         for(String s : numeriTelefonici){
             if(!s.isEmpty()){
@@ -125,7 +128,10 @@ public class Contatto implements Serializable{
         }
         return "";
     }
-    
+    /**
+     * @brief Ritorna la prima email in elenco del Contatto
+     * @return String PrimaMail
+     */
     public String getPrimaMail(){
         for(String s : email){
             if(!s.isEmpty()){

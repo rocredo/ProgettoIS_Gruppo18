@@ -108,7 +108,19 @@ public class SchermataBaseController implements Initializable{
         });
     }
     
-    
+    /**
+     * @brief Apre la finestra del contatto
+     * 
+     * Facendo doppioclick su un contatto viene aperta una finestra che mostra
+     * tutte le informazioni di quel particolare contatto
+     * 
+     * @pre Input: Oggetto di classe Contatto corrispondente a quello su cui si
+     * fa il doppioclick.
+     * @post Viene istanziata una finestra con tutte le informazioni di quel
+     * contatto specifico.
+     * 
+     * @param contact L'oggetto di classe Contatto che si vuole visualizzare
+     */
     
     private void showContact(Contatto contact) {
         try {
@@ -117,7 +129,7 @@ public class SchermataBaseController implements Initializable{
 
             // Passa i dati al controller della finestra di dettaglio
             SchermataContattoController controller = loader.getController();
-            controller.setContact(contact,contactTable);
+            controller.setContact(contact, contactTable);
 
             // Configura e mostra la finestra
             Stage stage = new Stage();
@@ -137,6 +149,7 @@ public class SchermataBaseController implements Initializable{
      * @param event Click sul pulsante "Aggiungi".
      * @throws IOException Se si verifica un errore durante il caricamento del file FXML.
      */
+    
     @FXML
     private void addContact(ActionEvent event) throws IOException {
         
@@ -223,6 +236,9 @@ public class SchermataBaseController implements Initializable{
      * Mostra la lista dei contatti preferiti. Viene lanciato cliccando sul pulsante
      * "Mostra preferiti".
      *
+     * 
+     * 
+     * @param event Clicca sul tasto con l'icona della stella
      */
     @FXML
     private void showFavorite(ActionEvent event){
@@ -244,7 +260,19 @@ public class SchermataBaseController implements Initializable{
         }
         
     }
-    
+    /**
+     * @brief Ricerca dei contatti all'interno della Rubrica.
+     * 
+     * Il metodo si occupa di aggiornare la Rubrica visualizzando solamente i
+     * contatti che hanno un attributo corrispondente alla stringa inserita
+     * nell'apposito campo di ricerca presente sull'interfaccia.
+     * 
+     * @pre Inserimento di una stringa nel campo ricerca.
+     * @post Visualizzazone di tutti i contatti che contengono una stringa
+     * dello stesso valore.
+     * 
+     * @param event Clicca sul tasto Cerca
+     */
     @FXML
     private void search(ActionEvent event){
         
@@ -263,7 +291,14 @@ public class SchermataBaseController implements Initializable{
             contactTable.setItems(Rubrica.getContactList());
         }
     }
-    
+    /**
+     * @brief Esegue un refresh della Rubrica.
+     * 
+     * Eseguendo il refresh è possibile visualizzare eventuali modifiche.
+     * 
+     * @param event Clicca sul tasto "Aggiorna"
+     * @throws IOException 
+     */
     @FXML
     private void refresh(ActionEvent event) throws IOException{
         contactTable.refresh();
