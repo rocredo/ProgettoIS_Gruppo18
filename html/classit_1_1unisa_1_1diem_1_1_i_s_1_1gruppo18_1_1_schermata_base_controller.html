@@ -213,7 +213,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isSearching</b></t
 </div><div class="memdoc">
 
 <p>Apre una nuova finestra per aggiungere un contatto. </p>
-<p>Carica l'interfaccia grafica e apre una finestra per la creazione di un nuovo contatto</p>
+<p>Carica l'interfaccia grafica per la creazione di un nuovo contatto</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>Click sul pulsante "Aggiungi". </td></tr>
@@ -253,7 +253,13 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isSearching</b></t
 </div><div class="memdoc">
 
 <p>Salva la lista dei contatti in un file CSV. </p>
-<p>Salva i contatti della rubrica in un file CSV. Ogni contatto viene scritto in una riga con i suoi attributi separati da un ";". Viene lanciato cliccando sul pulsante "Scarica". </p>
+<p>Salva i contatti della rubrica in un file CSV. Ogni contatto viene scritto in una riga con i suoi attributi separati da un ";". Viene lanciato cliccando sul pulsante "Scarica".</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Clicca su "Scarica". </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -277,7 +283,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isSearching</b></t
 </div><div class="memdoc">
 
 <p>Inizializza il controller e configura la tabella dei contatti. </p>
-<p>Imposta le proprietà delle colonne della tabella per collegarle agli attributi della classe <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che di occupa dela gestione dei contatti.">Contatto</a>. Carica la lista dei contatti nella tabella. </p>
+<p>Imposta le proprietà delle colonne della tabella per collegarle agli attributi della classe <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che si occupa dela gestione dei contatti.">Contatto</a>. Carica la lista dei contatti nella tabella. </p>
 
 </div>
 </div>
@@ -308,7 +314,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isSearching</b></t
 <p>Eseguendo il refresh è possibile visualizzare eventuali modifiche.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>Clicca sul tasto "Aggiorna" </td></tr>
+    <tr><td class="paramname">event</td><td>Clicca sul tasto "Aggiorna". </td></tr>
   </table>
   </dd>
 </dl>
@@ -350,7 +356,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isSearching</b></t
 <dl class="section post"><dt>Postcondition</dt><dd>Visualizzazone di tutti i contatti che contengono una stringa dello stesso valore.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>Clicca sul tasto Cerca </td></tr>
+    <tr><td class="paramname">event</td><td>Clicca sul tasto "Cerca". </td></tr>
   </table>
   </dd>
 </dl>
@@ -381,12 +387,12 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isSearching</b></t
 </div><div class="memdoc">
 
 <p>Apre la finestra del contatto. </p>
-<p>Facendo doppioclick su un contatto viene aperta una finestra che mostra tutte le informazioni di quel particolare contatto</p>
-<dl class="section pre"><dt>Precondition</dt><dd>Input: Oggetto di classe <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che di occupa dela gestione dei contatti.">Contatto</a> corrispondente a quello su cui si fa il doppioclick. </dd></dl>
+<p>Facendo doppio click su un contatto viene aperta una finestra che mostra tutte le informazioni di quel particolare contatto.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>Input: Oggetto di classe <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che si occupa dela gestione dei contatti.">Contatto</a> corrispondente a quello su cui si fa il doppio click. </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Viene istanziata una finestra con tutte le informazioni di quel contatto specifico.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">contact</td><td>L'oggetto di classe <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che di occupa dela gestione dei contatti.">Contatto</a> che si vuole visualizzare </td></tr>
+    <tr><td class="paramname">contact</td><td>L'oggetto di classe <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che si occupa dela gestione dei contatti.">Contatto</a> che si vuole visualizzare. </td></tr>
   </table>
   </dd>
 </dl>
@@ -420,7 +426,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isSearching</b></t
 <p>Mostra la lista dei contatti preferiti. Viene lanciato cliccando sul pulsante "Mostra preferiti".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>Clicca sul tasto con l'icona della stella </td></tr>
+    <tr><td class="paramname">event</td><td>Clicca sul tasto con l'icona a Stella. </td></tr>
   </table>
   </dd>
 </dl>
@@ -451,7 +457,13 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isSearching</b></t
 </div><div class="memdoc">
 
 <p>Carica i contatti nella lista a partire da un file CSV. </p>
-<p>Carica dei contatti nella rubrica a partire da un file CSV. Viene lanciato cliccando sul pulsante "Carica". </p>
+<p>Carica dei contatti nella rubrica a partire da un file CSV. Viene lanciato cliccando sul pulsante "Carica".</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Clicca su "Carica" </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

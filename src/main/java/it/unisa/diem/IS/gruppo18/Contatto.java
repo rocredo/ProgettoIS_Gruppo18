@@ -12,7 +12,7 @@ import javafx.beans.property.*;
 
 /**
  * @class Contatto
- * @brief Classe che di occupa dela gestione dei contatti.
+ * @brief Classe che si occupa dela gestione dei contatti.
  *
  * La classe Contatto contiene tutte le informazioni relative a un singolo contatto.
  * Include i metodi per accedere e modificare le informazioni del contatto.
@@ -85,16 +85,14 @@ public class Contatto implements Serializable{
     }
     
     /**
-     * @brief Ottiene la lista dei numeri di telefono del contatto.
-     * @return List<String> numeriTelefonici.
+     * @brief Ritorna la lista dei numeri di telefono del contatto.
      */
     public List<String> getNumeriTelefonici(){
         return this.numeriTelefonici;
     }
     
     /**
-     * @brief Ottiene la lista degli indirizzi email del contatto.
-     * @return List<String> email.
+     * @brief Ritorna la lista degli indirizzi email del contatto.
      */
     public List<String> getEmail(){
         return this.email;
@@ -246,6 +244,16 @@ public class Contatto implements Serializable{
         sb.append("\n");
         return sb.toString();
     }
+    
+    /**
+     * @brief Verifica l'uguaglianza tra con un altro oggetto
+     * 
+     * L'oggetto in input viene confrontato con l'oggetto chiamante per verificarne
+     * l'uguaglianza in termini di attributi.
+     * 
+     * @param obj Oggetto da confrontare
+     * @return boolean Esito confronto
+     */
     
     @Override
     public boolean equals(Object obj){

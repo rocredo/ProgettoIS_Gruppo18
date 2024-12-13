@@ -86,12 +86,12 @@ public class SchermataContattoController implements Initializable {
     }    
     
     /**
-     * @brief Metodo per salvare le modifiche sul Contatto
+     * @brief Metodo per salvare le modifiche sul Contatto.
      * 
-     * @pre L'input deve essere un oggetto di classe Contatto
-     * @post Il metodo modifica gli attributi dell'oggetto ricevuto in input
-     * @param contatto Oggetto di classe Contatto da modificare
-     * @param contactTable Riferimento della contactTable
+     * @pre L'input deve essere un oggetto di classe Contatto.
+     * @post Il metodo modifica gli attributi dell'oggetto ricevuto in input.
+     * @param contatto Oggetto di classe Contatto da modificare.
+     * @param contactTable Riferimento alla TableView.
      */
     
     public void setContact(Contatto contatto, TableView<Contatto> contactTable){
@@ -113,10 +113,10 @@ public class SchermataContattoController implements Initializable {
     }
     
     /**
-     * @brief Metodo per l'eliminazione di un Contatto in Rubrica
-     * @pre L'utente clicca sul tasto "Elimina"
-     * @post Il contatto viene eliminato dalla Rubrica
-     * @see Rubrica.remove()
+     * @brief Metodo per l'eliminazione di un Contatto in Rubrica.
+     * @pre L'utente clicca sul tasto "Elimina".
+     * @post Il contatto viene eliminato dalla Rubrica.
+     * @see Rubrica.remove().
      * 
      */
     @FXML
@@ -134,6 +134,7 @@ public class SchermataContattoController implements Initializable {
      * @post Il tasto "Modifica" cambia nome in "Salva", o viceversa, e
      * i campi contenenti le informazioni del contatto diventano modificabili,
      * o vengono congelati.
+     * @param event Click sul tasto "Modifica" o "Salva".
      */
     
     @FXML
@@ -173,10 +174,11 @@ public class SchermataContattoController implements Initializable {
     /**
      * @brief Metodo per aggiungere o rimuovere un Contatto alla lista dei 
      * contatti preferiti.
-     * @pre L'utente clicca sul tasto "Preferito"
+     * @pre L'utente clicca sul tasto "Preferito".
      * @post Il tasto preferito diventa giallo ed il contatto viene aggiunto
      * alla lista dei contatti preferiti oppure il tasto diventa trasparente
      * ed il contatto viene rimosso dalla lista dei contatti preferiti.
+     * @param event Click sul tasto "Preferito".
      */
     
     @FXML
@@ -190,9 +192,10 @@ public class SchermataContattoController implements Initializable {
     }
 
     /**
-     * @brief Metodo per chiudere la finestra del contatto
-     * @pre L'utente clicca sul tasto "Esci"
-     * @post La finestra del contatto viene chiusa
+     * @brief Metodo per chiudere la finestra del contatto.
+     * @pre L'utente clicca sul tasto "Esci".
+     * @post La finestra del contatto viene chiusa.
+     * @param event Click sul tasto "Esci".
      * 
      */
     @FXML

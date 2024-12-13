@@ -35,12 +35,11 @@ public class Rubrica {
     private static ObservableList<Contatto> contactList = FXCollections.observableArrayList();
     
     /**
-     * @brief Restituisce la lista dei contatti.
+     * @brief Ritorna la lista dei contatti.
      * 
      * Restituisce la lista osservabile dei contatti contenuti nella rubrica. Questo metodo
      * viene utilizzato dal controller per accedere alla lista.
      * 
-     * @return ObservableList<Contatto>.
      */
     public static ObservableList<Contatto> getContactList() {
         return contactList;

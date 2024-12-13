@@ -111,15 +111,15 @@ public class SchermataBaseController implements Initializable{
     /**
      * @brief Apre la finestra del contatto
      * 
-     * Facendo doppioclick su un contatto viene aperta una finestra che mostra
-     * tutte le informazioni di quel particolare contatto
+     * Facendo doppio click su un contatto viene aperta una finestra che mostra
+     * tutte le informazioni di quel particolare contatto.
      * 
      * @pre Input: Oggetto di classe Contatto corrispondente a quello su cui si
-     * fa il doppioclick.
+     * fa il doppio click.
      * @post Viene istanziata una finestra con tutte le informazioni di quel
      * contatto specifico.
      * 
-     * @param contact L'oggetto di classe Contatto che si vuole visualizzare
+     * @param contact L'oggetto di classe Contatto che si vuole visualizzare.
      */
     
     private void showContact(Contatto contact) {
@@ -144,7 +144,7 @@ public class SchermataBaseController implements Initializable{
     /**
      * @brief Apre una nuova finestra per aggiungere un contatto.
      *
-     * Carica l'interfaccia grafica e apre una finestra per la creazione di un nuovo contatto
+     * Carica l'interfaccia grafica per la creazione di un nuovo contatto
      *
      * @param event Click sul pulsante "Aggiungi".
      * @throws IOException Se si verifica un errore durante il caricamento del file FXML.
@@ -173,6 +173,7 @@ public class SchermataBaseController implements Initializable{
      * scritto in una riga con i suoi attributi separati da un ";". Viene
      * lanciato cliccando sul pulsante "Scarica".
      *
+     * @param event Clicca su "Scarica".
      */
     @FXML
     private void downloadContacts(ActionEvent event){
@@ -198,6 +199,7 @@ public class SchermataBaseController implements Initializable{
      * Carica dei contatti nella rubrica a partire da un file CSV. Viene lanciato
      * cliccando sul pulsante "Carica".
      *
+     * @param event Clicca su "Carica"
      */
     @FXML
     private void uploadContacts(ActionEvent event){
@@ -236,9 +238,7 @@ public class SchermataBaseController implements Initializable{
      * Mostra la lista dei contatti preferiti. Viene lanciato cliccando sul pulsante
      * "Mostra preferiti".
      *
-     * 
-     * 
-     * @param event Clicca sul tasto con l'icona della stella
+     * @param event Clicca sul tasto con l'icona a Stella.
      */
     @FXML
     private void showFavorite(ActionEvent event){
@@ -271,7 +271,7 @@ public class SchermataBaseController implements Initializable{
      * @post Visualizzazone di tutti i contatti che contengono una stringa
      * dello stesso valore.
      * 
-     * @param event Clicca sul tasto Cerca
+     * @param event Clicca sul tasto "Cerca".
      */
     @FXML
     private void search(ActionEvent event){
@@ -296,7 +296,7 @@ public class SchermataBaseController implements Initializable{
      * 
      * Eseguendo il refresh è possibile visualizzare eventuali modifiche.
      * 
-     * @param event Clicca sul tasto "Aggiorna"
+     * @param event Clicca sul tasto "Aggiorna".
      * @throws IOException 
      */
     @FXML

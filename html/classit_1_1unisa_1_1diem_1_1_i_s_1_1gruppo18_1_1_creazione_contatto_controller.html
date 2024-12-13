@@ -189,7 +189,13 @@ Button&#160;</td><td class="memItemRight" valign="bottom"><b>cancelNewButton</b>
 <p>Metodo per annullare la creazione di un nuovo contatto. </p>
 <p>Chiude la finestra corrente. Viene lanciato cliccando sul pulsante "Annulla".</p>
 <dl class="section pre"><dt>Precondition</dt><dd>L'utente clicca sul tasto "Annulla" </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>La creazione del contatto viene annullata e la finestra viene chiusa </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>La creazione del contatto viene annullata e la finestra viene chiusa</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Click sul tasto "Annulla". </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -217,9 +223,15 @@ Button&#160;</td><td class="memItemRight" valign="bottom"><b>cancelNewButton</b>
 </div><div class="memdoc">
 
 <p>Metodo per salvare un nuovo contatto. </p>
-<p>Acquisisce i dati dai campi dei textfield, crea un nuovo oggetto <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che di occupa dela gestione dei contatti.">Contatto</a>, imposta i rispettivi cambi e lo aggiunge alla rubrica. Viene lanciato cliccando sul pulsante "Salva".</p>
+<p>Acquisisce i dati dai textfield, crea un nuovo oggetto <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che si occupa dela gestione dei contatti.">Contatto</a>, imposta i rispettivi cambi e lo aggiunge alla rubrica. Viene lanciato cliccando sul pulsante "Salva".</p>
 <dl class="section pre"><dt>Precondition</dt><dd>L'utente, dopo aver compilato almeno il campo nome o il campo cognome clicca sul tasto "Salva". </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>Il <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che di occupa dela gestione dei contatti.">Contatto</a> viene salvato nella <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_rubrica.html" title="Classe che si occupa della gestione della rubrica.">Rubrica</a>.</dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Il <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html" title="Classe che si occupa dela gestione dei contatti.">Contatto</a> viene salvato nella <a class="el" href="classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_rubrica.html" title="Classe che si occupa della gestione della rubrica.">Rubrica</a>.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Click sul tasto "Salva"</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">IOException</td><td>Se ci sono problemi con l'IO. </td></tr>

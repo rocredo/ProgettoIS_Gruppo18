@@ -118,13 +118,15 @@ public class CreazioneContattoController implements Initializable {
     /**
      * @brief Metodo per salvare un nuovo contatto.
      * 
-     * Acquisisce i dati dai campi dei textfield, crea un nuovo oggetto Contatto, imposta
+     * Acquisisce i dati dai textfield, crea un nuovo oggetto Contatto, imposta
      * i rispettivi cambi e lo aggiunge alla rubrica. Viene lanciato cliccando sul pulsante
      * "Salva".
      * 
      * @pre L'utente, dopo aver compilato almeno il campo nome o il campo cognome
      * clicca sul tasto "Salva".
      * @post Il Contatto viene salvato nella Rubrica.
+     * 
+     * @param event Click sul tasto "Salva"
      * 
      * @throws IOException Se ci sono problemi con l'IO.
      */
@@ -157,6 +159,8 @@ public class CreazioneContattoController implements Initializable {
      * @pre L'utente clicca sul tasto "Annulla"
      * @post La creazione del contatto viene annullata e la finestra viene
      * chiusa
+     * 
+     * @param event Click sul tasto "Annulla".
      * 
      */
     @FXML
