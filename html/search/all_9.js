@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['salvafilebinario_0',['salvaFileBinario',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_rubrica.html#ae51587963ef5f69ba92fe3c9a32c32ff',1,'it::unisa::diem::IS::gruppo18::Rubrica']]],
-  ['savenewcontact_1',['saveNewContact',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_creazione_contatto_controller.html#a538290bd1ef08edd57fbd83c58de2a04',1,'it::unisa::diem::IS::gruppo18::CreazioneContattoController']]],
-  ['schermatabasecontroller_2',['SchermataBaseController',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_base_controller.html',1,'it::unisa::diem::IS::gruppo18']]],
-  ['schermatacontattocontroller_3',['SchermataContattoController',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_contatto_controller.html',1,'it::unisa::diem::IS::gruppo18']]],
-  ['search_4',['search',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_base_controller.html#afef5a072590ccca36703136044db00a2',1,'it::unisa::diem::IS::gruppo18::SchermataBaseController']]],
-  ['setcognome_5',['setCognome',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a1ef38418539018cb88181791c34a79be',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['setcontact_6',['setContact',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_contatto_controller.html#aeaa966cd6792b8d90768a56d01cdb39f',1,'it::unisa::diem::IS::gruppo18::SchermataContattoController']]],
-  ['setdomicilio_7',['setDomicilio',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#ab3c272c10f6230ce9ee8c974ddf3c846',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['setisfavorite_8',['setIsfavorite',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#ac9721153216a6f91f32abb9615376095',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['setnome_9',['setNome',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a9c192499ed770e3f211095128ce7bd71',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['showcontact_10',['showContact',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_base_controller.html#a494442f336aa41056e9d568cfb2b946c',1,'it::unisa::diem::IS::gruppo18::SchermataBaseController']]],
-  ['showfavorite_11',['showFavorite',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_base_controller.html#ab0b66afe62ed06c8a9668192451ba6a8',1,'it::unisa::diem::IS::gruppo18::SchermataBaseController']]],
-  ['start_12',['start',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_applicazione_rubrica.html#a94f879e87b1aa277dc2edc3080a8a082',1,'it::unisa::diem::IS::gruppo18::ApplicazioneRubrica']]]
+  ['salvafilebinario_0',['salvaFileBinario',['../class_package_progetto_1_1_rubrica.html#a83fb448b4ef0796bbb18b00967c6370c',1,'PackageProgetto::Rubrica']]],
+  ['savenewcontact_1',['saveNewContact',['../class_package_progetto_1_1_creazione_contatto_controller.html#a5dc02be2b57f74fb9dfcb7e3f6edf7b1',1,'PackageProgetto::CreazioneContattoController']]],
+  ['schermatabasecontroller_2',['SchermataBaseController',['../class_package_progetto_1_1_schermata_base_controller.html',1,'PackageProgetto']]],
+  ['schermatacontattocontroller_3',['SchermataContattoController',['../class_package_progetto_1_1_schermata_contatto_controller.html',1,'PackageProgetto']]],
+  ['search_4',['search',['../class_package_progetto_1_1_schermata_base_controller.html#a8052755393cfa59fa53c5778d265a2d0',1,'PackageProgetto::SchermataBaseController']]],
+  ['setcognome_5',['setCognome',['../class_package_progetto_1_1_contatto.html#a749e1a194f2a546777bdf057448ad127',1,'PackageProgetto::Contatto']]],
+  ['setcontact_6',['setContact',['../class_package_progetto_1_1_schermata_contatto_controller.html#a315ae57c4c5a71c5593fa855acab0683',1,'PackageProgetto::SchermataContattoController']]],
+  ['setdomicilio_7',['setDomicilio',['../class_package_progetto_1_1_contatto.html#ace2322ede9c94471fbbefad579c63377',1,'PackageProgetto::Contatto']]],
+  ['setisfavorite_8',['setIsfavorite',['../class_package_progetto_1_1_contatto.html#aae262f7f498ff6090ffd15429757bb52',1,'PackageProgetto::Contatto']]],
+  ['setnome_9',['setNome',['../class_package_progetto_1_1_contatto.html#a7be2a0bf27b5f264a57f7c780b3ed239',1,'PackageProgetto::Contatto']]],
+  ['showcontact_10',['showContact',['../class_package_progetto_1_1_schermata_base_controller.html#a50fdaa995dd50b1072c200a00f036e2a',1,'PackageProgetto::SchermataBaseController']]],
+  ['showfavorite_11',['showFavorite',['../class_package_progetto_1_1_schermata_base_controller.html#a476ff0340be9d3fc3540b8c4ce1b0644',1,'PackageProgetto::SchermataBaseController']]],
+  ['start_12',['start',['../class_package_progetto_1_1_applicazione_rubrica.html#a69c046fbc1b43b3b1581e6fa2d2db4d4',1,'PackageProgetto::ApplicazioneRubrica']]]
 ];

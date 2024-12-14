@@ -1,8 +1,24 @@
 var searchData=
 [
-  ['testadd_0',['testAdd',['../class_rubrica_test.html#a6263661789e95aa0888f1c7da7dc602e',1,'RubricaTest']]],
-  ['testcaricafilebinario_1',['testCaricaFileBinario',['../class_rubrica_test.html#a9b80410346726f7e359e7b498c1e6990',1,'RubricaTest']]],
-  ['testgetcontactlist_2',['testGetContactList',['../class_rubrica_test.html#aed4eafc38b6e506b46880a34236669cc',1,'RubricaTest']]],
-  ['testremove_3',['testRemove',['../class_rubrica_test.html#a297676ca733fd85a02746367ca923f78',1,'RubricaTest']]],
-  ['tostring_4',['toString',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#aac6a50c3d9216ba0bdf0a9e9884b3d4e',1,'it::unisa::diem::IS::gruppo18::Contatto']]]
+  ['testadd_0',['testAdd',['../class_package_progetto_1_1_rubrica_test.html#af309613d23c5ff2a5e26368d238b26d2',1,'PackageProgetto::RubricaTest']]],
+  ['testaddemail_1',['testAddEmail',['../class_package_progetto_1_1_contatto_test.html#a1a9affeb47143c85f5c8234f76320bc7',1,'PackageProgetto::ContattoTest']]],
+  ['testaddnumero_2',['testAddNumero',['../class_package_progetto_1_1_contatto_test.html#acd930d6b62416650490fa2b2eb79c3b5',1,'PackageProgetto::ContattoTest']]],
+  ['testcaricafilebinario_3',['testCaricaFileBinario',['../class_package_progetto_1_1_rubrica_test.html#a617c0b29cf4939e07e2136e06028d08c',1,'PackageProgetto::RubricaTest']]],
+  ['testequals_4',['testEquals',['../class_package_progetto_1_1_contatto_test.html#ac2340b163467d67df367d298cf7dcefd',1,'PackageProgetto::ContattoTest']]],
+  ['testgetcognome_5',['testGetCognome',['../class_package_progetto_1_1_contatto_test.html#a8e904df1a79d9f7b924c293303a2480f',1,'PackageProgetto::ContattoTest']]],
+  ['testgetcontactlist_6',['testGetContactList',['../class_package_progetto_1_1_rubrica_test.html#a55e38f58660dadb92585bc61ea50e055',1,'PackageProgetto::RubricaTest']]],
+  ['testgetdomicilio_7',['testGetDomicilio',['../class_package_progetto_1_1_contatto_test.html#a3680c660bdcedd175f25a41a193d960f',1,'PackageProgetto::ContattoTest']]],
+  ['testgetemail_8',['testGetEmail',['../class_package_progetto_1_1_contatto_test.html#afdc65c31fbdb79f54fd7e558240081b0',1,'PackageProgetto::ContattoTest']]],
+  ['testgetisfavorite_9',['testGetIsFavorite',['../class_package_progetto_1_1_contatto_test.html#a77204093740ff20aee344983d7641708',1,'PackageProgetto::ContattoTest']]],
+  ['testgetnome_10',['testGetNome',['../class_package_progetto_1_1_contatto_test.html#a7cf0b673b80e5d5a9837292c10eba7a4',1,'PackageProgetto::ContattoTest']]],
+  ['testgetnumeritelefonici_11',['testGetNumeriTelefonici',['../class_package_progetto_1_1_contatto_test.html#ad20494dc1d00e7e72c3eade43d25225f',1,'PackageProgetto::ContattoTest']]],
+  ['testgetprimamail_12',['testGetPrimaMail',['../class_package_progetto_1_1_contatto_test.html#a1c19ac720bf5b134edd5ad6930d9824a',1,'PackageProgetto::ContattoTest']]],
+  ['testgetprimonumero_13',['testGetPrimoNumero',['../class_package_progetto_1_1_contatto_test.html#a43456febf40466853b0814f1050a043f',1,'PackageProgetto::ContattoTest']]],
+  ['testremove_14',['testRemove',['../class_package_progetto_1_1_rubrica_test.html#a79a089355b789325e7e74bfa2ce86caf',1,'PackageProgetto::RubricaTest']]],
+  ['testsetcognome_15',['testSetCognome',['../class_package_progetto_1_1_contatto_test.html#a1ee2aaf5f0a5fe0fb9fe30b7f798a2ea',1,'PackageProgetto::ContattoTest']]],
+  ['testsetdomicilio_16',['testSetDomicilio',['../class_package_progetto_1_1_contatto_test.html#a0ea785e128de72ee2b1908bd27e29596',1,'PackageProgetto::ContattoTest']]],
+  ['testsetisfavorite_17',['testSetIsfavorite',['../class_package_progetto_1_1_contatto_test.html#af9f3b25f4f8865344cff2f61a53ae068',1,'PackageProgetto::ContattoTest']]],
+  ['testsetnome_18',['testSetNome',['../class_package_progetto_1_1_contatto_test.html#a871a46d05cb1a3c69129807b1bbeace9',1,'PackageProgetto::ContattoTest']]],
+  ['testtostring_19',['testToString',['../class_package_progetto_1_1_contatto_test.html#a02fc2e7331ad14234f010a769f851738',1,'PackageProgetto::ContattoTest']]],
+  ['tostring_20',['toString',['../class_package_progetto_1_1_contatto.html#a7109870c8973de7e2c4bb784ea77677e',1,'PackageProgetto::Contatto']]]
 ];

@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['cancelnewcontact_0',['cancelNewContact',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_creazione_contatto_controller.html#abf9e734c4c923bd033f2ee96e172f178',1,'it::unisa::diem::IS::gruppo18::CreazioneContattoController']]],
-  ['caricafilebinario_1',['caricaFileBinario',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_rubrica.html#ae2b12882b44858caf087fa43568faaae',1,'it::unisa::diem::IS::gruppo18::Rubrica']]],
-  ['cognome_2',['cognome',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#af9975c5b6f7b3a8290d55667f19b8b7d',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['contactlist_3',['contactList',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_rubrica.html#aebc034b292f3b69367b1d02c687982ee',1,'it::unisa::diem::IS::gruppo18::Rubrica']]],
-  ['contatto_4',['Contatto',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html',1,'it.unisa.diem.IS.gruppo18.Contatto'],['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a1a1564286240df53cc32ff1d34ce202a',1,'it.unisa.diem.IS.gruppo18.Contatto.Contatto()']]],
-  ['contattotest_5',['ContattoTest',['../class_contatto_test.html',1,'']]],
-  ['creazionecontattocontroller_6',['CreazioneContattoController',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_creazione_contatto_controller.html',1,'it::unisa::diem::IS::gruppo18']]]
+  ['cancelnewcontact_0',['cancelNewContact',['../class_package_progetto_1_1_creazione_contatto_controller.html#a87a316f3ad7d3e8554b7b08fe0972791',1,'PackageProgetto::CreazioneContattoController']]],
+  ['caricafilebinario_1',['caricaFileBinario',['../class_package_progetto_1_1_rubrica.html#ae989f30db36c97543241370aa45385ba',1,'PackageProgetto::Rubrica']]],
+  ['clear_2',['clear',['../class_package_progetto_1_1_rubrica.html#a09aa5468f1ae40b08985e23ed23b9f4f',1,'PackageProgetto::Rubrica']]],
+  ['cognome_3',['cognome',['../class_package_progetto_1_1_contatto.html#a2538f38d1dfbb156a05d7a37c39861c2',1,'PackageProgetto::Contatto']]],
+  ['contactlist_4',['contactList',['../class_package_progetto_1_1_rubrica.html#a4d60037e8959a3d2c515cb7f7a7d2550',1,'PackageProgetto::Rubrica']]],
+  ['contatto_5',['Contatto',['../class_package_progetto_1_1_contatto.html',1,'PackageProgetto.Contatto'],['../class_package_progetto_1_1_contatto.html#a9e222784c3661c8b7154d6e05afa69d4',1,'PackageProgetto.Contatto.Contatto()']]],
+  ['contattotest_6',['ContattoTest',['../class_package_progetto_1_1_contatto_test.html',1,'PackageProgetto']]],
+  ['creazionecontattocontroller_7',['CreazioneContattoController',['../class_package_progetto_1_1_creazione_contatto_controller.html',1,'PackageProgetto']]]
 ];

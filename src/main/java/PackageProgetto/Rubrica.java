@@ -75,6 +75,17 @@ public class Rubrica {
         contactList.remove(contatto);
     }
     
+    
+    /**
+     * @brief Cancella tutti i contatti nella rubrica
+     * 
+     * Rimuove ogni oggetto della classe Contatto nella lista dei contatti.
+     * Metodo per uso esclusivo di testing.
+     */
+    public static void clear(){
+        contactList.clear();
+    }
+    
     /**
      * @brief Salva il file bin
      * 

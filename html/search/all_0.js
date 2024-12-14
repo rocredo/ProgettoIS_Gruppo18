@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['add_0',['add',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_rubrica.html#a16543fd2527441c872e9ed34089d80b1',1,'it::unisa::diem::IS::gruppo18::Rubrica']]],
-  ['addcontact_1',['addContact',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_base_controller.html#aa34537c71100eb892e235cf43299d642',1,'it::unisa::diem::IS::gruppo18::SchermataBaseController']]],
-  ['addemail_2',['addEmail',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a40e8068454d60dab56f18dcad22af98e',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['addnumero_3',['addNumero',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a16a2b33449389d4e749d658e75c5d75a',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['addtofavorite_4',['addToFavorite',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_schermata_contatto_controller.html#a23fa87c399e389d8a7a6d339a04ee150',1,'it::unisa::diem::IS::gruppo18::SchermataContattoController']]],
-  ['applicazionerubrica_5',['ApplicazioneRubrica',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_applicazione_rubrica.html',1,'it::unisa::diem::IS::gruppo18']]]
+  ['add_0',['add',['../class_package_progetto_1_1_rubrica.html#ac16ac224d4d356f8721885b1908495d9',1,'PackageProgetto::Rubrica']]],
+  ['addcontact_1',['addContact',['../class_package_progetto_1_1_schermata_base_controller.html#a73e8c55b6a9e97ad4489b351c85e7a19',1,'PackageProgetto::SchermataBaseController']]],
+  ['addemail_2',['addEmail',['../class_package_progetto_1_1_contatto.html#abc5af6e85bd403080204fe73834e3396',1,'PackageProgetto::Contatto']]],
+  ['addnumero_3',['addNumero',['../class_package_progetto_1_1_contatto.html#a426c0132f4bec71370f5189dbcdb9b9f',1,'PackageProgetto::Contatto']]],
+  ['addtofavorite_4',['addToFavorite',['../class_package_progetto_1_1_schermata_contatto_controller.html#a1248ed36f868513d4cc1ae3e9f92975a',1,'PackageProgetto::SchermataContattoController']]],
+  ['applicazionerubrica_5',['ApplicazioneRubrica',['../class_package_progetto_1_1_applicazione_rubrica.html',1,'PackageProgetto']]]
 ];

@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['getcognome_0',['getCognome',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a5f84b4e82a2e73891f8d4b414734ab67',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['getcontactlist_1',['getContactList',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_rubrica.html#aadf66921db539acec36f8fa712a147a8',1,'it::unisa::diem::IS::gruppo18::Rubrica']]],
-  ['getdomicilio_2',['getDomicilio',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#acb8f59869aaae215a93914b1cff47e68',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['getemail_3',['getEmail',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#acc4a8fddfab3a7ba7598c99f29e13919',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['getisfavorite_4',['getIsFavorite',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a232d6c92a0d447f3dfe5224933a22866',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['getnome_5',['getNome',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a6c0b6f3bc8f364961dd48b6e476cd4e6',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['getnumeritelefonici_6',['getNumeriTelefonici',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#a333f04ae058a1cae5f4ca509cc73bda4',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['getprimamail_7',['getPrimaMail',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#adb30c49c28ce4f2b8328bd33303b1c20',1,'it::unisa::diem::IS::gruppo18::Contatto']]],
-  ['getprimonumero_8',['getPrimoNumero',['../classit_1_1unisa_1_1diem_1_1_i_s_1_1gruppo18_1_1_contatto.html#ad4f9106a85669d33e0367ecb67bd0963',1,'it::unisa::diem::IS::gruppo18::Contatto']]]
+  ['getcognome_0',['getCognome',['../class_package_progetto_1_1_contatto.html#a129a5933cbba0faf902932e54784a59e',1,'PackageProgetto::Contatto']]],
+  ['getcontactlist_1',['getContactList',['../class_package_progetto_1_1_rubrica.html#a8c11199a6f93121823b1cd3ec7fd59ac',1,'PackageProgetto::Rubrica']]],
+  ['getdomicilio_2',['getDomicilio',['../class_package_progetto_1_1_contatto.html#aca7cc0b4e8783cf897b092df4a71e74f',1,'PackageProgetto::Contatto']]],
+  ['getemail_3',['getEmail',['../class_package_progetto_1_1_contatto.html#a99ec9333a6016f4275bf6391a35d3865',1,'PackageProgetto::Contatto']]],
+  ['getisfavorite_4',['getIsFavorite',['../class_package_progetto_1_1_contatto.html#a9effee4ba2b4387127f2157a8ca978d2',1,'PackageProgetto::Contatto']]],
+  ['getnome_5',['getNome',['../class_package_progetto_1_1_contatto.html#addce73a6295e7ebe95f8500ef97f222c',1,'PackageProgetto::Contatto']]],
+  ['getnumeritelefonici_6',['getNumeriTelefonici',['../class_package_progetto_1_1_contatto.html#aeaab5058bc801cd4c7bb7dbc1f4b03e3',1,'PackageProgetto::Contatto']]],
+  ['getprimamail_7',['getPrimaMail',['../class_package_progetto_1_1_contatto.html#ae6c2d3f868a232422c6f06f9e1d64ec1',1,'PackageProgetto::Contatto']]],
+  ['getprimonumero_8',['getPrimoNumero',['../class_package_progetto_1_1_contatto.html#a35e3f13b96ab54ec7131bc06ccf81cf2',1,'PackageProgetto::Contatto']]]
 ];
