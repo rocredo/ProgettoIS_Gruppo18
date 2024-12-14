@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="920.0" style="-fx-background-color: linear-gradient(to bottom right, #282828, #484848);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PackageProgetto.CreazioneContattoController">
+    <children>
+      <Label alignment="CENTER" layoutX="176.0" layoutY="179.0" text="Creazione contatto" textFill="#efefef" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="176.0" layoutY="139.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="45.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="329.0" minHeight="6.0" prefHeight="83.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="421.0" minHeight="10.0" prefHeight="332.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="326.0" minHeight="10.0" prefHeight="202.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Nome" textFill="#efefef" />
+                        <TextField fx:id="nameField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire nome..." stylesheets="@DarkTheme.css" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Cognome" textFill="#efefef" />
+                        <TextField fx:id="surnameField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire cognome..." stylesheets="@DarkTheme.css" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Numeri telefonici" textFill="#efefef" />
+                        <TextField fx:id="numberField1" prefHeight="31.0" prefWidth="355.0" promptText="Inserire numero..." stylesheets="@DarkTheme.css" />
+                        <TextField fx:id="numberField2" layoutX="10.0" layoutY="175.0" prefHeight="31.0" prefWidth="355.0" promptText="Inserire numero..." stylesheets="@DarkTheme.css" />
+                        <TextField fx:id="numberField3" layoutX="10.0" layoutY="191.0" prefHeight="31.0" prefWidth="355.0" promptText="Inserire numero..." stylesheets="@DarkTheme.css" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Inserire email..." textFill="#efefef" />
+                        <TextField fx:id="emailField1" prefHeight="31.0" prefWidth="355.0" promptText="Inserire email..." stylesheets="@DarkTheme.css" />
+                        <TextField fx:id="emailField2" layoutX="10.0" layoutY="175.0" prefHeight="31.0" prefWidth="355.0" promptText="Inserire email..." stylesheets="@DarkTheme.css" />
+                        <TextField fx:id="emailField3" layoutX="10.0" layoutY="160.0" prefHeight="31.0" prefWidth="355.0" promptText="Inserire nome..." stylesheets="@DarkTheme.css" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Domicilio" textFill="#efefef" />
+                        <TextField fx:id="addressField" prefHeight="31.0" prefWidth="355.0" promptText="Inserire domicilio..." stylesheets="@DarkTheme.css" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="41.0">
+                     <children>
+                        <Button fx:id="saveNewButton" mnemonicParsing="false" onAction="#saveNewContact" stylesheets="@DarkTheme.css" text="Salva" />
+                        <Button fx:id="cancelNewButton" mnemonicParsing="false" onAction="#cancelNewContact" stylesheets="@DarkTheme.css" text="Annulla" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

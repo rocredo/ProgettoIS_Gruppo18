@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5-dic-2024, 19.19.04
+    Author     : Mario
+*/
+
+.button {
+    -fx-background-color: transparent; 
+    -fx-background-radius: 3; 
+    -fx-border-radius: 3; 
+    -fx-border-color: #cfcfcf; 
+    -fx-border-width: 0.5; 
+    -fx-text-fill: #cfcfcf;
+    -fx-padding: 5;
+}
+
+.split-pane {
+    -fx-background-color: linear-gradient(to bottom right, #282828, #484848);
+}
+
+.split-pane-divider {
+    -fx-background-color: linear-gradient(to bottom, #505050, #383838, #505050);
+    -fx-pref-width: 8;
+}
+
+.table-view .column-header {
+    -fx-background-color: #282828;
+    -fx-text-fill: #fefefe;
+    -fx-alignment: center; 
+    -fx-border-color: #cfcfcf; 
+    -fx-border-width: 0 0.2 1 0; 
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: #fefefe;
+    -fx-font-size: 12px;
+    font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: transparent; 
+    -fx-background-radius: 3;
+    -fx-border-radius: 3; 
+    -fx-border-color: #cfcfcf;
+    -fx-border-width: 0.5; 
+    -fx-text-fill: #cfcfcf; 
+    -fx-padding: 5; 
+}
+
+
+

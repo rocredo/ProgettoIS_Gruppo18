@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="PackageProgetto.ContattoTest" time="0.029" tests="16" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/roccoloffredo/Documents/ProgettoIS_Gruppo18/target/test-classes:/Users/roccoloffredo/Documents/ProgettoIS_Gruppo18/target/classes:/Users/roccoloffredo/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/roccoloffredo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="user.country" value="IT"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/roccoloffredo/Documents/ProgettoIS_Gruppo18/target/surefire/surefirebooter-20241214160103384_3.jar /Users/roccoloffredo/Documents/ProgettoIS_Gruppo18/target/surefire 2024-12-14T16-01-03_349-jvmRun1 surefire-20241214160103384_1tmp surefire_0-20241214160103384_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="surefire.test.class.path" value="/Users/roccoloffredo/Documents/ProgettoIS_Gruppo18/target/test-classes:/Users/roccoloffredo/Documents/ProgettoIS_Gruppo18/target/classes:/Users/roccoloffredo/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/roccoloffredo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/roccoloffredo"/>
+    <property name="user.language" value="it"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/roccoloffredo/Documents/ProgettoIS_Gruppo18"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/roccoloffredo/Documents/ProgettoIS_Gruppo18/target/surefire/surefirebooter-20241214160103384_3.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="1.8.0_421-b09"/>
+    <property name="user.name" value="roccoloffredo"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.1.1"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/roccoloffredo/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/g0/t0mk4xld7f16mrn35m6xhrn80000gn/T/"/>
+    <property name="java.version" value="1.8.0_421"/>
+    <property name="user.dir" value="/Users/roccoloffredo/Documents/ProgettoIS_Gruppo18"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/roccoloffredo/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.421-b09"/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="java.ext.dirs" value="/Users/roccoloffredo/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="testSetIsfavorite" classname="PackageProgetto.ContattoTest" time="0.005">
+    <system-out><![CDATA[setIsfavorite
+]]></system-out>
+  </testcase>
+  <testcase name="testGetEmail" classname="PackageProgetto.ContattoTest" time="0.001">
+    <system-out><![CDATA[getEmail
+]]></system-out>
+  </testcase>
+  <testcase name="testSetCognome" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[setCognome
+]]></system-out>
+  </testcase>
+  <testcase name="testToString" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[toString
+]]></system-out>
+  </testcase>
+  <testcase name="testSetDomicilio" classname="PackageProgetto.ContattoTest" time="0.001">
+    <system-out><![CDATA[setDomicilio
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPrimaMail" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[getPrimaMail
+]]></system-out>
+  </testcase>
+  <testcase name="testAddEmail" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[addEmail
+]]></system-out>
+  </testcase>
+  <testcase name="testGetNome" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[getNome
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPrimoNumero" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[getPrimoNumero
+]]></system-out>
+  </testcase>
+  <testcase name="testGetNumeriTelefonici" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[getNumeriTelefonici
+]]></system-out>
+  </testcase>
+  <testcase name="testAddNumero" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[addNumero
+]]></system-out>
+  </testcase>
+  <testcase name="testGetCognome" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[getCognome
+]]></system-out>
+  </testcase>
+  <testcase name="testEquals" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[equals
+]]></system-out>
+  </testcase>
+  <testcase name="testSetNome" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[setNome
+]]></system-out>
+  </testcase>
+  <testcase name="testGetIsFavorite" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[getIsFavorite
+]]></system-out>
+  </testcase>
+  <testcase name="testGetDomicilio" classname="PackageProgetto.ContattoTest" time="0.0">
+    <system-out><![CDATA[getDomicilio
+]]></system-out>
+  </testcase>
+</testsuite>
