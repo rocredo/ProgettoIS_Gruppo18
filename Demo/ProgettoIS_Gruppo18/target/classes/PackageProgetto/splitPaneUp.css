@@ -1,0 +1,8 @@
+.split-pane {
+    -fx-background-color: linear-gradient(to bottom right, #282828, #484848); /* Sfondo dello SplitPane */
+}
+
+.split-pane-divider {
+    -fx-background-color: linear-gradient(to bottom, #505050, #383838, #505050); /* Colore della barra separatrice */
+    -fx-pref-width: 8; /* Larghezza della barra separatrice */
+}
