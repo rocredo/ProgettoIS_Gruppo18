@@ -1,9 +1,0 @@
-.text-field {
-    -fx-background-color: transparent; /* Sfondo puro bianco */
-    -fx-background-radius: 3; /* Smussatura leggera */
-    -fx-border-radius: 3; /* Smussatura del bordo */
-    -fx-border-color: #cfcfcf; /* Colore del bordo sottile */
-    -fx-border-width: 0.5; /* Spessore del bordo */
-    -fx-text-fill: #cfcfcf; /* Colore del testo */
-    -fx-padding: 5; /* Spaziatura interna */
-}

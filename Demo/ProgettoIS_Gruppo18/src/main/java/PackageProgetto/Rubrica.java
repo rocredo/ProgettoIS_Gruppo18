@@ -45,10 +45,6 @@ public class Rubrica {
         return contactList;
     }
 
-    public static void clear(){
-        contactList.clear();
-    }
-    
     /**
      * @brief Aggiunge un contatto alla rubrica.
      * 
@@ -77,6 +73,17 @@ public class Rubrica {
      */
     public static void remove(Contatto contatto){
         contactList.remove(contatto);
+    }
+    
+    
+    /**
+     * @brief Cancella tutti i contatti nella rubrica
+     * 
+     * Rimuove ogni oggetto della classe Contatto nella lista dei contatti.
+     * Metodo per uso esclusivo di testing.
+     */
+    public static void clear(){
+        contactList.clear();
     }
     
     /**
